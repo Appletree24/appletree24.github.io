@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="21级三翼技术部复试(前端)参考资料, Appletree24,github">
+    <meta name="keywords" content="时间复杂度与基本排序算法, Appletree24,github">
     <meta name="description" content="永远年轻 永远热泪盈眶.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>21级三翼技术部复试(前端)参考资料 | It&#39;s Appletree24</title>
+    <title>时间复杂度与基本排序算法 | It&#39;s Appletree24</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">21级三翼技术部复试(前端)参考资料</h1>
+                    <h1 class="description center-align post-title">时间复杂度与基本排序算法</h1>
                 </div>
             </div>
         </div>
@@ -432,12 +432,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Thoughts/">
-                                <span class="chip bg-color">Thoughts</span>
+                            <a href="/tags/%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">简单排序算法</span>
                             </a>
                         
-                            <a href="/tags/Share/">
-                                <span class="chip bg-color">Share</span>
+                            <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+                                <span class="chip bg-color">时间复杂度</span>
                             </a>
                         
                     </div>
@@ -448,8 +448,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/HTML-CSS-JS/" class="post-category">
-                                HTML CSS JS
+                            <a href="/categories/Share/" class="post-category">
+                                Share
                             </a>
                         
                     </div>
@@ -461,7 +461,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-29
+                    2021-10-09
                 </div>
                 
 
@@ -482,350 +482,177 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="21级三翼技术部复试-前端-参考资料"><a href="#21级三翼技术部复试-前端-参考资料" class="headerlink" title="21级三翼技术部复试(前端)参考资料"></a>21级三翼技术部复试(前端)参考资料</h1><p>一个目的是复习巩固一下，因为军训时发现脑中突然回忆不起来盒子模型了，感觉还是稍微敲一下会有印象，二是和大家一起分享交流一下，因为不保证每个答案都是正确且完善的。</p>
-<h4 id="题目内容："><a href="#题目内容：" class="headerlink" title="题目内容："></a>题目内容：<img src="https://i.loli.net/2021/09/29/dKof1gSh5JYvAzt.png" alt="QQ截图20210928211317.png"></h4><p>按顺序从头到尾。</p>
-<h4 id="1-熟悉哪些标签需要闭合哪些不需要："><a href="#1-熟悉哪些标签需要闭合哪些不需要：" class="headerlink" title="1.熟悉哪些标签需要闭合哪些不需要："></a>1.熟悉哪些标签需要闭合哪些不需要：</h4><p>从标准原则上来说，标签都需要闭合，但是实际编写时，有些人也有不闭合的习惯。有些时候只有封闭页面才会正常显示。</p>
-<blockquote>
-<p>需要封闭的：</p>
-<pre><code class="line-numbers language-html">           &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-           &lt;div&gt;&lt;/div&gt;
-           &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
-           &lt;label&gt;&lt;/label&gt;
-           &lt;form&gt;&lt;/form&gt;
-           &lt;select&gt;&lt;/select&gt;
-           &lt;b&gt;&lt;/b&gt;&lt;i&gt;&lt;/i&gt;&lt;u&gt;&lt;/u&gt;
-           &lt;h1&gt;&lt;/h1&gt;
-           &lt;font&gt;&lt;/font&gt;
-           &lt;span&gt;&lt;/span&gt;
-           &lt;STRONG&gt;&lt;/STRONG&gt;
-           &lt;button&gt;&lt;/button&gt;
-</code></pre>
-</blockquote>
-<blockquote>
-<p>不需要封闭的：</p>
-<pre><code class="line-numbers language-html">&lt;img&gt;、&lt;input&gt;、&lt;li&gt;、&lt;p&gt;、&lt;br&gt;
-</code></pre>
-</blockquote>
-<p>其实还有很多需要封闭与不封闭的标签，在这里就先写这些常用的吧。总之我个人而言，还是要从一开始就养成封闭的好习惯吧。</p>
-<h4 id="2-块元素和内联元素的区别"><a href="#2-块元素和内联元素的区别" class="headerlink" title="2.块元素和内联元素的区别"></a>2.块元素和内联元素的区别</h4><p>在了解这个问题之前我觉得最好了解一下文档流，很多书籍好像默认读者是了解这个概念的，在此先不展开，一是我自己也一知半解，二是军训时间一直没做到静下来好好思考，之后会把这部分更新一下。在此先罗列一下区别好了。</p>
-<h4 id="块级元素："><a href="#块级元素：" class="headerlink" title="块级元素："></a>块级元素：</h4><blockquote>
-<p>（1）总是在新行上开始，占据一整行（目前理解为敲代码时为如此效果）</p>
-<p>（2）高度、行高以及外边距和内边距都可控（涉及盒子模型，下面会讲到）</p>
-<p>（3）跨密度始终与浏览器宽度一致，与内容无关</p>
-<p>（4）他可以容纳内联元素和其他块元素（可以把块级元素想象成一个大容器，里面可以容纳其他的容器）</p>
-</blockquote>
-<p>光从字面上理解可能感觉还是有点茫然，我们可以看几个块级元素的例子来理解。</p>
-<h4 id=""><a href="#" class="headerlink" title=":"></a><xmp><div></xmp>:</h4><h4 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="https://i.loli.net/2021/09/29/IE1ycbPYRDtZdq3.png" alt="1.png"></h4><p>我们可以看到，<xmp><div></xmp>两句总是单独占行</p>
-<p>像这样的还有1-6级标题，段落，水平分割线（可配合理解第三条)，列表等。</p>
-<h4 id="内联元素（行级元素）："><a href="#内联元素（行级元素）：" class="headerlink" title="内联元素（行级元素）："></a>内联元素（行级元素）：</h4><blockquote>
-<p>（1）和其他元素都在一行上<br> （2）行高以及外边距内边距部分可变<br> （3）宽度只与内容有关<br> （4）行内元素只能容纳文本或者其他行内元素<br> （5）不能设置宽高，其宽度随内容增加，高度随字体大小而改变。<br> （6)内联元素可以设置外边界，但部分有用，也可以设置内边界，部分浏览器不支持。</p>
-</blockquote>
-<p>部分配合上述内容不难理解，此处只罗列部分元素例子。</p>
-<p>  span、sub、sup、u、var等等。</p>
-<h4 id="3-CSS选择器"><a href="#3-CSS选择器" class="headerlink" title="3.CSS选择器"></a>3.CSS选择器</h4><p>CSS选择器分为Id和Class选择器，和其他编程语言类似，id即为对特定元素指定特定样式，而Class则为对多个元素设定样式。</p>
-<p><strong>Id属性不要以数字开头，数字开头的Id在Mozilla基金会的产品中无法使用(Firefox)</strong></p>
-<p><strong>Class不要以数字作为第一个字符，不然在Mozilla基金会的产品中无法使用(Firefox)</strong></p>
-<p>Class选择器同样可以指定特定元素使用Class:</p>
-<pre><code class="line-numbers language-html">&lt;head&gt;
-&lt;style&gt;
-p.center
-&#123;
-    text-align:center;
-&#125;
-&lt;/style&gt;
-&lt;/head&gt;
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22578842&auto=1&height=66"></iframe>
 
-&lt;body&gt;
-&lt;h1 class=&quot;center&quot;&gt;这个标题不受影响&lt;/h1&gt;
-&lt;p class=&quot;center&quot;&gt;这个段落居中对齐。&lt;/p&gt; 
-&lt;/body&gt;
+<h2 id="时间复杂度与基本排序算法"><a href="#时间复杂度与基本排序算法" class="headerlink" title="时间复杂度与基本排序算法"></a><center>时间复杂度与基本排序算法</center></h2><h3 id="一-时间复杂度"><a href="#一-时间复杂度" class="headerlink" title="一.时间复杂度"></a><center>一.时间复杂度</center></h3><p>  时间复杂度是用来描述一个算法的，从字面意义我们不难理解，时间复杂度就是用来描述一个算法所需要的时间。用来估计常数操作的一种指标</p>
+<p>  我们首先来从常数操作的概念入手。</p>
+<pre><code class="line-numbers language-java">int a=arr[i];
 </code></pre>
-<p>效果如图所示：</p>
-<p><img src="https://i.loli.net/2021/09/29/XvjgSLtCFzupAyU.png" alt="2.png"></p>
-<h4 id="4-7-关于盒子模型"><a href="#4-7-关于盒子模型" class="headerlink" title="4-7.关于盒子模型"></a>4-7.关于盒子模型</h4><p>  所有Html元素可以看作是一个盒子，一共分为Content、Padding、Border、Margin四个部分，我们可以对他们进行样式的个性化设置，同时可以在这些部分的周围放置元素。</p>
-<p><img src="https://i.loli.net/2021/09/29/ytfOqWNAse2SaRF.png" alt="3.png"></p>
-<p>  关于如何来设置盒子模型中的内容，其实很好理解。看一段例子就能明白。</p>
-<pre><code class="line-numbers language-html">![4](C:\Users\Appletree24\Desktop\4.png)&lt;style&gt;
-div &#123;
-    background-color: lightgrey;
-    width: 300px;
-    border: 25px solid green;
-    padding: 25px;
-    margin: 25px;
-&#125;
-&lt;/style&gt;
-&lt;div&gt;这里是盒子内的实际内容。有 25px 内间距，25px 外间距、25px 绿色边框。&lt;/div&gt;
+<p>  这就是个典型的常数操作，执行的时间和这个数组的数据量没有关系，单纯只是数组寻址，将i位置的值赋给整型变量a而已，无论数组里只有10个元素还是有10000个元素，耗时依旧。</p>
+<pre><code class="line-numbers language-java">int b=list.get(i);
+</code></pre>
+<p>  但如果我们要从链表中获得一个值，这将不是个常数操作，因为无论是单链表还是双链表，如果你想获得i位置的值，你都要从左到右遍历，直到i位置，再将其值赋给a，显而易见这不是个和数据量没有关系的操作。</p>
+<p> 除了上述所提到的两个例子外，我们所熟知的加减乘除也是常数操作，位运算也是常数操作（下面会涉及）.</p>
+<p>  下面我们正式开始介绍时间复杂度。</p>
+<p>  我将通过选择排序的算法来引入时间复杂度的概念：</p>
+<p>  选择排序：</p>
+<blockquote>
+<p>1.有一个大小为N的数组，从下标0至N-1进行遍历，并将最小的数字与0位置进行交换</p>
+<p>2.从下标1至N-1进行遍历，并将最小的数字与1位置的数字进行交换</p>
+<p>3.以此类推，再从下标2至N-1进行遍历，并将最小的数字与2位置的数字进行交换</p>
+<p>4.最后就可得到一个从小到大排列的数组了</p>
+</blockquote>
+<p>  那么这个算法的时间复杂度到底是多少呢？我们采用如下的方式来定义时间复杂度：</p>
+<p>  首先不难看出，我们要对数组中每个位置的数字看一眼，一共就是N眼，这是常数操作。之后我们还要进行比较大小的操作，来找到最小的那个数字，N个数就需要比较N次，这也是常数操作。最后还要进行一次交换操作。这就是第一次遍历过程中所进行的全部操作。</p>
+<p>  承接上面的逻辑，第二次遍历我们需要看N-1眼，进行N-1次比较，最后进行一次交换操作。就这样一直到最后的遍历结束。我们来列一个表格分析一下。</p>
+<blockquote>
+<p>看的次数：N+N-1+N-2+N-3+……</p>
+<p>比较次数：N+N-1+N-2+N-3+……</p>
+<p>交换次数：1+1+1+1+1+……</p>
+</blockquote>
+<p>​    除交换次数外，这明显就是等差数列的求和问题，我们套入首项末项的等差求和公式，可以得到看的次数与比较次数各自的次数和，最终我们将两个次数和进行相加操作，合并同类项，并在式子最后加入我们之前扔掉的交换次数的次数和，就可以得到一个数学表达式。</p>
+<h5 id="aN²-bn-c"><a href="#aN²-bn-c" class="headerlink" title="aN²+bn+c"></a><center>aN²+bn+c</center></h5><p>   不难理解，这个表达式估计了选择排序的常数操作次数。于是我们便称选择排序这个算法的时间复杂度为O(n²)，其中O叫做BigO，代表上限，可以理解为一个算法的最差情况下的时间复杂度，我们一般都用这种复杂度来评估算法，还有其他两种时间复杂度，分别为θ(f(n))与Ω(f(n))，其中前者代表这个算法平均的时间复杂度，一般在工程中使用，因为工程人员认为一个算法有好情况也有坏情况，平均值更加可靠；后者代表最好情况下的时间复杂度(有些算法会因为数据的状况不一样而导致时间复杂度不同，下面会讲到)。</p>
+<p>  不难发现，选择排序的时间复杂度括号中为N²，我们将表达式中除最高项的其他项都抹去，只留下最高项，甚至连最高项的系数也抹去，剩下的表达式为f(N)，即为括号里的内容。这就是时间复杂度。</p>
+<p>  所以当你想了解一个算法的时间复杂度，你一定要非常清晰的理解这个算法的思路，因为只有这样你才能进一步计算其常数操作的表达式。</p>
+  <hr></hr>
 
-首先，利用div来设置一个分区，分区内部即为盒子模型中的内容
-background-color很好理解，就是背景的颜色，后面使用的是英文的方式，还可以使用网络色号、十六进制色号等、RGB等
-下面的四行同样很好理解，就是为对应英文的元素设置宽度，其中px单位为像素，border后的solid green也是设置颜色的内容。
+<p>  讲完了时间复杂度，我们再来讲一下额外空间复杂度。</p>
+<p>  何为额外空间复杂度呢？如果在程序运行的过程中，不需要额外的数据结构，只是用额外的几个变量，那么额外的空间复杂度就是O(1)。相反的，如果我们申请了一个和原数组大小一样或一半大小的数组，额外空间复杂度就为O(n)。</p>
+<h3 id="二-位运算"><a href="#二-位运算" class="headerlink" title="二.位运算"></a><center>二.位运算</center></h3><p>  现代计算机中的所有数据都是以二进制形式存储在设备中，为0和1两种状态，计算机对二进制数据进行的运算即为位运算，位运算有&amp;、|、^、~、&gt;&gt;、&lt;&lt;这几种，位运算的速度比四则运算来的还要快。</p>
+<p>  这次文章里我们只用异或运算与和运算。</p>
+<p>  首先将异或运算，异或运算的符号为^，a^b即为a与b进行异或运算，我们规定，两个位相同为0，相异为1，举个例子：</p>
+<center>1^0=1 0^0=0 1^1=0 0^1=1</center>
+
+<p>  以上即为异或运算的运算规则，除此之外，我们还需要了解几条异或运算的性质：</p>
+<blockquote>
+<p>1.异或运算满足交换律与结合律</p>
+<p>a^b=b^a          (a^b)^c == a^(b^c)</p>
+<p>2.对于任何数x，都有 x^x=0，x^0=x</p>
+<p>理解过来也就是，0与任何数异或等于任何数，任何数与自身异或等于0</p>
+<p>3.自反性: a^b^b=a^0=a;</p>
+<p>这个不难理解，但是十分重要，下面会主要用到这条性质。</p>
+<p>4.如果有一群数字，无论他们异或的顺序如何，只要数字全部相同，那么顺序不会影响最终的异或结果</p>
+</blockquote>
+<p>  我们来更深一步理解异或运算，并初步运用异或运算进行一些操作。</p>
+<p>  eg：假如我们现在有两个数a和b，a=10110，b=00111，那么a^b为多少呢？</p>
+<p>  位运算是位与位相对的运算，我们需要进行一位一位的异或运算。如下图所示</p>
+<p>  <a target="_blank" rel="noopener" href="https://imgtu.com/i/5ihZ7V"><img src="https://z3.ax1x.com/2021/10/09/5ihZ7V.png" alt="5ihZ7V.png"></a></p>
+<blockquote>
+<p>  1.从左到右进行第一位的异或运算 0^1=1</p>
+<p>  2.第二位的异或运算 1^1=0 第三位 1^1=0 第四位 0^0=0 以此类推</p>
+<p>  3.最终我们得到a^b=10001</p>
+</blockquote>
+<p>  我们当然可以将异或运算在画图中进行这样的操作，就像列竖式一样，但我们不难发现还有一种规律隐藏在异或运算中，我们不妨来将异或运算看作是一种不进位的二进制运算，更深层次的理解异或运算。</p>
+<blockquote>
+<p>  1.从左到右 0+1=1 不足2不进位 为1</p>
+<p>  2.第二位 1+1=2 足2为0但不进位</p>
+<p>  3.第三位 1+1=2 足2为0但不进位</p>
+<p>  4.第四位 0+0=0 以此类推</p>
+<p>  5.最终我们一样得到了10001这个结果</p>
+</blockquote>
+<p>  很好，现在看来我们更深层次理解了异或运算这样一种位运算，如此的神奇与美丽，有人可能问，我们为什么要从这个角度来理解异或运算呢？我也可以根据上面的运算规则进行一位一位的运算啊，我们从不进位二进制的角度来理解会对你在性质的推导方面有极大的便利，如果你对一般性质的推导也从第一个层面来入手，我认为你多半会在挫败中失去开工之前的兴致。再者，深层次理解一种运算的规律，这本身也是十分令人欣喜的。</p>
+<p>  应用：Swap</p>
+<p>  到目前为止，你已经可以说自己认识了异或运算了，那么我们能用目前所掌握的异或知识做些什么呢？你可以用来写一个swap函数:</p>
+<pre><code class="line-numbers language-java">//此处使用Java，因为下面我要用语法糖，C语言直接把前面的类什么的内容换成void即可
+public static void swap(int[] arr,int i,int j)&#123;
+    arr[i]=arr[i]^arr[j];
+    arr[j]=arr[i]^arr[j];
+    arr[i]=arr[i]^arr[j];
+&#125;
 </code></pre>
-<p>  其最后的效果如下：</p>
-<p><img src="https://i.loli.net/2021/09/29/iznIM3S4QD9krs5.png" alt="4.png"></p>
-<p>其次便是CSS元素的宽度与高度计算：</p>
-<p>  还是以上面的代码为例，其中width并不代表CSS元素真正的宽度，只是代表着content的宽度，而真正的宽度应该是300+25X2+25X2+25X2=450px，而高度也是如此，将width不变，其他部分的元素进行乘以2的处理，最后相加，总结得出如下的公式。</p>
-<p>  <strong>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距</strong></p>
-<p>  <strong>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</strong></p>
-<h4 id="8-CSS定位"><a href="#8-CSS定位" class="headerlink" title="8.CSS定位"></a>8.CSS定位</h4><p>  CSS中的定位是使用position，其中position的属性有五个值：</p>
-<ol>
-<li>static</li>
-<li>relative</li>
-<li>fixed</li>
-<li>absolute</li>
-<li>sticky</li>
+<p>  你现在可能看完后一头雾水，这怎么就把两个数值进行交换操作了呢？不用着急，我们来一行行看这个函数体。</p>
+<p>  首先我们来用一个简单的顺序理解上面的代码，而不是一上来就从数组入手。</p>
+<pre><code class="line-numbers language-java">a=a^b;
+b=a^b;
+a=a^b;
+</code></pre>
+<p>  如果你想交换两个变量的数值，那么你只需要运行这三行代码即可，为什么？</p>
+<blockquote>
+<p>  1.首先第一行，我们将a^b这个值通过等号运算符赋给a</p>
+<p>  2.第二行 我们将a^b赋给b，但注意，此时的a已经是a^b了，所以b现在为a^b^b，你可能已经发现问题的重要性了，快用你的鼠标中键把cursor变成箭头状，翻到上面的异或运算第三条性质，a^b^b不就是a本身吗？此时我们就将a的值赋给了b。</p>
+<p>  3.第三行 此时的a^b便是a^a^b，毫无疑问了，这就是b，我们成功将b的值赋给了a</p>
+<p>  4.到此为止，我们顺利完成了a与b的数值的交换</p>
+</blockquote>
+<p>  此时你可能会很高兴，觉得这个方法真是太装逼了，再也不用像翁恺老师说的那样，我还要用第三个空杯子先把值传给它才行，太酷炫了。</p>
+<p>  但我下面要说的就是这个方法的问题，换句话说，我并不推荐你以后用这样的方法来进行数值的交换。</p>
+<p>  首先，位运算确实要比我们使用temp来进行交换来的快，而且也不需要申请一个新的变量来储存你需要交换的数据中的一个，但是这不足以让他在这场较量中获胜。</p>
+<p>  异或运算的问题就在于，如果这需要交换的两个数值在内存中不是两块独立存在的区域，那么这个方法就会出错，这一个问题就十分致命，但我们依然可以通过上面的这个swap来获得一些学习异或运算的成就感，你也可以继续往下看下去。</p>
+<p>  我们现在就不难理解上面的代码了，其实就是把arr[]这个数组中i位置和j位置的数字进行互换而已。</p>
+<h3 id="三-面试真题"><a href="#三-面试真题" class="headerlink" title="三.面试真题"></a><center>三.面试真题</center></h3><p>  我们来通过上面所学的知识看一道面试题，但是要解决下面这道面试题，你还需要了解一下取反与和运算，不过不用担心，我会在解题过程中写入这两种运算的讲解。</p>
+<blockquote>
+<p>  题目内容：</p>
+<p>  有一个整型数组，数组中有许多的数字。</p>
+<p>  （1）其中有一种数字出现了奇数次，而其他数字都出现了偶数次，请你找到这个数。</p>
+<p>  （2）其中有两种数字出现了奇数次，而其他数字都出现了偶数次，请你找到这两个数。</p>
+<p>​    以上两问的算法都要求时间复杂度为O(N)，额外空间复杂度为O(1)。</p>
+</blockquote>
+<p>  我希望你能画2分钟时间认真想一下思路，看看自己能不能通过对付这道题来说足够的知识储备来解决，虽然熟练度肯定有所欠缺，但我想大概的思路还是不难的，如果你想到了，或是毫无头绪，再来看下面的内容。</p>
+<p>  我们首先来对付第一问：</p>
+<blockquote>
+<p>  1.首先我们申请一个名为eor的整型变量，将其初始化为0.</p>
+<p>  2.将eor从数组中第一个元素异或至数组中最后一个元素，最后的eor即为那个出现了奇数次的数。</p>
+</blockquote>
+<p>  代码部分：</p>
+<pre><code class="line-numbers language-java">public static void question1(int[] arr)&#123;
+    int eor=0;
+    for(int cur:arr)&#123;
+        eor^=cur;
+    &#125;
+    //for循环中的参数为语法糖，如果用C的话，和for(int i=0;i&lt;=n;i++)为一个意思，都是遍历
+    System.out.println(eor);
+&#125;
+</code></pre>
+<p>  什么？就这么短吗？确实就这么短，但是里面蕴含的内容我们还是要详细了解一番。</p>
+<blockquote>
+<p>  1.我们不妨假设数组中的a出现了奇数次，其他数字例如b出现了偶数次</p>
+<ol start="2">
+<li>a^a^a^a^a=a 不难理解，此处不做解释，一步步运算即可。</li>
 </ol>
-<p>  Static定位是Html元素的默认值，顾名思义就是没有定位，不会受到Top、bottom等的影响</p>
-<p>  Fixed定位则是相对于浏览器窗口而言，即窗口在滚动时，拥有此定位的元素也不会移动。可以理解为有一个悬浮窗浮动在屏幕上。(脱离文档流，相对于浏览器窗口进行定位)</p>
-<p>  Relative定位顾名思义，是相对于元素的位置(未脱离文档流，正常位置仍然存在)</p>
-<pre><code class="line-numbers language-html">&lt;style&gt;
-h2.pos_left
-&#123;
-    position:relative;
-    left:-20px;//其中-20px会导致元素从左侧位置向左移动20像素
+<p>  ​    b^b^b^b=0 同样不做详解</p>
+<p>  3.由2我们不难了解到，如果一个数字本身异或奇数次，那么最后还会得到它本身，如果一个数字异或偶数次，那么最后会得到0.</p>
+<p>  4.不妨令第一个出现的数字就为a eor^a=0^a=a</p>
+<p>  5.之后eor^b^b^b^b^b^b 无论有多少个b，最后所有的b都将为0，而eor与0异或，还会得到eor本身，也就是出现奇数次的那个a。</p>
+<p>  6.于是最后我们只需要将eor输出即可了</p>
+</blockquote>
+<p>  第一问只是个送分题，第二问虽然只是多了一个数，但我们就需要动点脑子了。先贴上代码部分，有了上一道题目的铺垫，我想通过阅读第二问的代码，大多数人也能灵光一闪了，甚至有些人应该不用阅读也可以做出第二问。</p>
+<pre><code class="line-numbers language-java">public static void question2(int[] arr)&#123;
+    int eor=0,onlyOne=0;
+    for(int curNum:arr)&#123;
+        eor^=curNum;
+    &#125;
+    int rightOne=eor&amp;(~eor+1);
+    for(int cur:arr)&#123;
+        if((cur&amp;rightOne)==0)&#123;
+            onlyOne^=cur;
+        &#125;
+    &#125;
+    System.out.println(onlyOne+&quot;&quot;+(eor^onlyOne));
 &#125;
+</code></pre>
+<blockquote>
+<p>  1.我们还是承接上一问的思路，这次我们不妨设a与b都出现了奇数次，那么a与b之前所有出现偶数次的数字最后都是一个0，不用管他们，最后肯定会剩下eor=a^b，此时我们知道a与b是不相等的，所以a与b异或出来的结果中一定至少有一位不为0，而这(些)位置便是a与b的二进制中不同的位置。</p>
+<p>2.此时我们申请一个eor‘这个变量，将eor’与数组中不是0的那一位上为0的数字进行异或，那么a与b中肯定会少去一个，最后得到的eor‘即为a与b中的某一个，大功告成，我们此时只要将eor’与eor异或即可得到另外一个数了。</p>
+</blockquote>
+<p>  思路就是这样，理解上面的代码应该就不难了，但是&amp;和~又是什么意思呢，这就是开头说好要讲的剩下的位运算。</p>
+<p>  &amp;为和运算，它的运算规则是：</p>
+<center>1&0=0 1&1=1 0&0=0</center>
 
-h2.pos_right
-&#123;
-    position:relative;
-    left:20px;
-&#125;
-&lt;/style&gt;
-</code></pre>
-<p>Absolute定位则是相对于其最近的父元素(脱离文档流)</p>
-<p>Sticky则是基于用户的滚动位置来定位，当你滚动超过了此页时，会跟随着你的滑动继续显示。</p>
-<h4 id="9-CSS显示相关"><a href="#9-CSS显示相关" class="headerlink" title="9.CSS显示相关"></a>9.CSS显示相关</h4><pre><code class="line-numbers language-html">&lt;head&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-p &#123;display: inline&#125;
-div &#123;display: none&#125;
-&lt;/style&gt;
-&lt;/head&gt;
+<p>  ~为取反运算，它的运算规则是：</p>
+<center>~1=0 ~0=1</center>
 
-&lt;body&gt;
-&lt;p&gt;本例中的样式表把段落元素设置为内联元素。&lt;/p&gt;
-
-&lt;p&gt;而 div 元素不会显示出来！&lt;/p&gt;
-
-&lt;div&gt;div 元素的内容不会显示出来！&lt;/div&gt;
-</code></pre>
-<p> 从英文字面意思理解即可，display就是显示，inline就是行内，none就是不显示，一气呵成下来就可以搞懂，整个代码的p设定为内联元素，而把div设置成不显示。</p>
-<p>  关于display的可能值：none：元素不会被显示</p>
-<p>​                                      block：元素会被显示为块级元素</p>
-<p>​                                      inline：默认。变为内联元素</p>
-<p>​                                      list-item：同li相同，作为列表显示</p>
-<p>​                                      table：作为块级表格显示，inline-table则为内联表格</p>
-<p>​                                      inherit：继承父元素的display值</p>
-<p>  关于可能的值还有很多，不在此一一罗列了，只罗列了一些目前我用到过的。</p>
-<h4 id="关于margin和position定位的不同"><a href="#关于margin和position定位的不同" class="headerlink" title="关于margin和position定位的不同"></a>关于margin和position定位的不同</h4><p> 首先定位，就是用什么方式定位到这个元素（感觉好像搁这搁这一样）</p>
-<p> 首先看一下margin的样例：</p>
-<pre><code class="line-numbers language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;title&gt;&lt;/title&gt;
-        &lt;style&gt;
-            /* 保证body充满整个页面 */
-            html,body&#123;
-                width: 100%;
-                height: 100%;
-                /* 设置所有外边距属性为0 */
-                margin: 0;
-                padding: 0;
-            &#125;
-            .a &#123;
-                width:100px;
-                height:100px;
-                background-color: red;
-                margin-top: 200px;
-            &#125;
-            .b &#123;
-                width:50px;
-                height:50px;
-                background-color: green;
-            &#125;
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div class=&quot;a&quot;&gt;
-            &lt;div class=&quot;b&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>  <strong>1.给div1内部的div2设置一个margin-top，结果它的父级div1跟着div2一起下移了。或者给一个div1设置一个margin-top，不给div1内部的div2设置margin-top，结果div2跟着div1一起下移了。</strong></p>
-<p>  **2.两个同级元素div1和div2（先div1再div2），给div1设置一个margin-top，结果div1和div2整体一起向下移动。（当div1在div2后面，*<em>给div1设置一个margin-top，不会出现两个div整体下移情况*<em>）。</em></em></p>
-<p>  <strong>3.毗邻的两个兄弟元素之间的外边距会塌陷。</strong></p>
-<p>  先贴出结论，通过上面的代码理解一下，第一条的意思就是将上面的div嵌套顺序互换，都会使红绿矩形整体下移，其中如果数值设置不合理，还会导致一个元素覆盖在另一个元素上的情况。</p>
-<p>  第三点可以借助下面的代码进行理解：</p>
-<pre><code class="line-numbers language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;utf-8&quot; /&gt;
-        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-        &lt;title&gt;测试&lt;/title&gt;
-        &lt;style&gt;
-            html,body&#123;
-              margin:0;
-              padding:0;
-            &#125;
-            .div1&#123;
-              width:400px;
-              height:200px;
-              background:red;
-              margin-bottom:100px;
-            &#125;
-            .div2&#123;
-              width:400px;
-              height:200px;
-              background:yellow;
-              /* margin-top:200px; */
-            &#125;
-        &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;div class=&#39;div1&#39;&gt;&lt;/div&gt;
-      &lt;div class=&#39;div2&#39;&gt; &lt;/div&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>  一开始的红黄两色矩形上下边相差100px，因为为div1设置了100px的bottom，而div2没有。当我们将注释取消后，应当为100+200=300的差距，但事实上显示在浏览器窗口实际是200px的间距。<strong>这是因为毗邻的两个兄弟元素之间的外边距会塌陷，相邻的两个兄弟元素之间的外边距会取两者之间的最大值进行合并。</strong></p>
-<h4 id="关于position的理解："><a href="#关于position的理解：" class="headerlink" title="关于position的理解："></a>关于position的理解：</h4><p>  我们借助上面对position属性的定义来理解</p>
-<p>  其实很好理解，不脱离文档流的属性，其原始位置依旧存在着，即使为此元素设置了top等值，在其下面新建元素时，也还是会按照原来的初始位置进行摆放。</p>
-<p>  而脱离文档流的属性，则不会产生上述的情况。</p>
-<p>  <strong>1.margin的值为百分数时，其值是基于父元素的宽度的百分比的外边距(****padding也是如此，当其为百分数时，其值是基于父元素的宽度的百分比的内边距)****。比如 margin-top:10%，是按照**父亲**宽度的10%计算，而不是父亲高度的10%。*</strong></p>
-<p><strong>2.以上的情况的position是relative或者static，对于absolute结果会有些变化，尝试了一下，设置为*<em>absolute（或者设置float，比如float:right）会使margin****-top****独立，不会共享。*</em></strong></p>
-<p>*<em>所有毗邻的两个或更多盒元素的margin将会合并为一个margin共享之。毗邻的定义为：同级（按顺序，前面的设置*<em>margin，后面的会共享**margin**</em>*）或者嵌套（没有顺序，子元素或者父元素任意一个设置*<em>margin，所有元素都会共享**margin**</em>*）的盒元素，并且它们之间没有非空内容、Padding或Border分隔。</em>*</p>
-<h4 id="关于hover伪元素："><a href="#关于hover伪元素：" class="headerlink" title="关于hover伪元素："></a>关于hover伪元素：</h4><p>  CSS中的伪元素用来添加一些选择器的特殊效果。</p>
-<p>  CSS中的语法：<strong>selector.class:pseudo-element {property:value;}</strong></p>
-<p>  伪元素有很多：first-line(只能用于块级元素)、first-letter、before、after、focus等等，此处只说hover。</p>
-<p>  hover伪元素为把鼠标放在连接上时的效果。和link中的hover是一样的。</p>
-<pre><code class="line-numbers language-html">a:hover   &#123;color:red;&#125;
-&lt;p&gt;将鼠标移上并点击此链接: &lt;a href=&quot;//www.baidu.com/&quot;&gt;baidu.com&lt;/a&gt;&lt;/p&gt;
-</code></pre>
-<p> 此代码就会使光标移动到网页超链接文本时，所有字变成红色。实现这样的效果，hover必须安排在link和visited后。</p>
-<h4 id="关于用CSS和列表标签写导航栏："><a href="#关于用CSS和列表标签写导航栏：" class="headerlink" title="关于用CSS和列表标签写导航栏："></a>关于用CSS和列表标签写导航栏：</h4><p>  有很多很棒的教程，时间原因先贴出链接，过后再补内容。思路都大同小异，就是一个审美美化能力。</p>
-<p>  <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_navbar.asp">https://www.w3school.com.cn/css/css_navbar.asp</a></p>
-<p> <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45476607/article/details/119190231">https://blog.csdn.net/weixin_45476607/article/details/119190231</a></p>
-<p>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/winfredzen/article/details/50725819">https://blog.csdn.net/winfredzen/article/details/50725819</a></p>
-<h4 id="10-关于JS"><a href="#10-关于JS" class="headerlink" title="10.关于JS"></a>10.关于JS</h4><p>  JavaScript虽然有Java，但是他和Java没什么关系，是两种完全不同的语言，Java更加的复杂。JS是一门非常流行的脚本语言，前端必学的三大件：HTML、CSS、JS。</p>
-<h4 id="关于如何在HTML中插入JS以及JS如何获取元素："><a href="#关于如何在HTML中插入JS以及JS如何获取元素：" class="headerlink" title="关于如何在HTML中插入JS以及JS如何获取元素："></a>关于如何在HTML中插入JS以及JS如何获取元素：</h4><p>  JS脚本必须在<xmp><script></script></xmp>两句之间,脚本可被放置在<body>和<head>中。</p>
-<p>  <a target="_blank" rel="noopener" href="https://imgtu.com/i/44CuVA"><img src="https://z3.ax1x.com/2021/09/29/44CuVA.png" alt="44CuVA.png"></a></p>
-<p>  其实说实话，毕竟还是一门编程语言，很多东西还是共同的，语法不同一些，在script中间写入你想要的函数(function)，<strong>JS是一门区分大小写的语言，大小写有误是不会被正确识别的。</strong>JS中的大部分内容你通过字面意思理解就可以，比如这个getElementById，就是通过ID来查找HTML中此Id元素的JS代码，innerHTML就是修改HTML元素的语句。document.write(Date())就是把当前的日期时间写到网页中。</p>
-<p>———————————————————————————————————————————</p>
-<p>  三翼技术部的学姐学长们给的doc文档中大概就是这些内容了，还有一个index的页面，其中也有一些要求。</p>
-<p><img src="https://i.loli.net/2021/09/29/xhAsN2cU9zMI1mD.png" alt="7.png"></p>
-<p>  这几条内容就不在此详细写开了，稍微一看就可以了解的内容，用源代码仿写着学长学姐们的打包的网页就好了。</p>
-<p>  <img src="https://i.loli.net/2021/09/29/2lc9H7owt6husn4.png" alt="8.png"></p>
-<p><img src="https://i.loli.net/2021/09/29/lvWqKowNLuHCP18.png" alt="6.png"></p>
-<p>  综上大概就是这些内容，其实还有很多细节性的、基础性的东西没写到，就是为了回答一些问题才写这些，还是开头那些话，主要还是为了复习一下这些题目，交流一下正确完善的回答。</p>
-<h4 id="2021-10-3-补："><a href="#2021-10-3-补：" class="headerlink" title="2021.10.3 补："></a>2021.10.3 补：</h4><p>  补一个简陋的登陆页面（无登录功能）：</p>
-<p>  效果图：<a target="_blank" rel="noopener" href="https://imgtu.com/i/4LXRpR"><img src="https://z3.ax1x.com/2021/10/03/4LXRpR.png" alt="4LXRpR.png"></a></p>
-<p>  代码：</p>
-<pre><code class="line-numbers language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, intial-scal=1.0&quot;&gt;
-    &lt;title&gt;Test1&lt;/title&gt;
-    &lt;style&gt;
-        body&#123;
-            background-image: linear-gradient(to left,#9c88ff,#3cadeb);
-            display: flex;
-            justify-content: center;
-        &#125;
-        .a&#123;
-            position:relative;
-            top: 100px;
-            width: 2000px;
-            height: 550px;
-            box-shadow: 0 5px 15px rgba(0,0,0,.8);
-            display: flex;
-        &#125;
-        .b&#123;
-            width: 890px;
-            height: 550px;
-            background-image: url(&quot;1.jpg&quot;);
-            background-size: cover;
-        &#125;
-        .c&#123;
-            width: 645px;
-            height: 550px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        &#125;
-        .d&#123;
-            width: 250px;
-            height: 500px;
-        &#125;
-        .d h1&#123;
-            font: 900 30px &#39;&#39;;
-        &#125;
-        .e&#123;
-            width: 230px;
-            margin: 20px 0;
-            outline: none;
-            border: 0;
-            padding: 10px;
-            border-bottom: 3px solid rgb(80, 80, 170);
-            font: 900 16px &#39;&#39;;
-        &#125;
-        .f&#123;
-            float: right;
-            margin: 10px 0;
-            font-size: large;
-        &#125;
-        .g&#123;
-            position: absolute;
-            margin-left: -130px;
-            bottom: 40px;
-            display: block;
-            width: 200px;
-            height: 60px;
-            font: 900 30px &#39;&#39;;
-            text-decoration: none;
-            line-height: 50px;
-            border-radius: 30px;
-            background-image: linear-gradient(to left,#9c88ff,#3cadeb);
-            text-align: center;
-        &#125;
-        .h&#123;
-            position: absolute;
-            margin-left: 150px;
-            bottom: 40px;
-            display: block;
-            width: 200px;
-            height: 60px;
-            font: 900 30px &#39;&#39;;
-            text-decoration: none;
-            line-height: 50px;
-            border-radius: 30px;
-            background-image: linear-gradient(to left,#9c88ff,#3cadeb);
-            text-align: center;
-        &#125;
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;div class=&quot;a&quot;&gt;
-            &lt;div class=&quot;b&quot;&gt;              &lt;/div&gt;
-                &lt;div class=&quot;c&quot;&gt;
-                    &lt;div class=&quot;d&quot;&gt;
-                        &lt;h1 style=&quot;text-align: center;&quot;&gt;Login&amp;Regsiter&lt;/h1&gt;
-                        &lt;input type=&quot;text&quot; class=&quot;e&quot; placeholder=&quot;USER NAME&quot;&gt;
-                        &lt;input type=&quot;text&quot; class=&quot;e&quot; placeholder=&quot;ACCOUNT&quot;&gt;
-                        &lt;input type=&quot;password&quot; class=&quot;e&quot; placeholder=&quot;PASSWORD&quot;&gt;
-                        &lt;a href=&quot;#&quot; class=&quot;f&quot;&gt;Forget the password?&lt;/a&gt;
-                        &lt;a href=&quot;#&quot; class=&quot;g&quot;&gt;Login&lt;/a&gt;
-                        &lt;a href=&quot;#&quot; class=&quot;h&quot;&gt;Regsiter&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<p>到此为止，这道面试题我们就成功解决了。</p>
+<h3 id="四-插入排序"><a href="#四-插入排序" class="headerlink" title="四.插入排序"></a><center>四.插入排序</center></h3><p>  在最后，我们再来讲一种排序方法，叫做插入排序</p>
+<p>  <a target="_blank" rel="noopener" href="https://imgtu.com/i/5ibR6U"><img src="https://z3.ax1x.com/2021/10/09/5ibR6U.png" alt="5ibR6U.png"></a></p>
+<p>  我们现在有这样一个数组(如上图)，要对数组进行从小到大的数字排序，我们该如何做呢？</p>
+<blockquote>
+<p>  1.首先我们来做到0-0位置上的数字有序，我们已经实现了</p>
+<p>  2.接着我们来做到0-1位置上的数字有序，因为3&gt;1，所以我们不需要进行交换</p>
+<p>  3.之后我们来做到0-2位置上的数字有序，因为2&lt;3，所以两个位置需要进行一个交换，之后2&gt;1，所以不用继续交换</p>
+<p>  4.以此类推，其实就是从1的位置从后往前看，如果后一个数小于前面的数字，那么两个数字就要交换位置，反之或是前面没有了数字，那么便不再需要进行交换，按照这个方法循环至最后一位即可了。</p>
+</blockquote>
+<p>  那么为什么要讲这样一种排序方法呢？因为它和冒泡排序以及选择排序的时间复杂度不同，它的时间复杂度受数据状况的影响。</p>
+<p>  如果数组为7654321，那么我们需要进行0+1+2+3+4+5+6次交换，和选择排序相同，时间复杂度为O(N²)，但若此时的数组情况为1234567，那么我们一次交换也不需要，只需要看一眼所有的数就行，都是常熟操作，时间复杂度就是O(N)。</p>
+<p>  但时间复杂度，我们一般均用最坏的情况来估计，而非使用最好或是平均。</p>
 
                 
             </div>
@@ -852,7 +679,7 @@ div &#123;display: none&#125;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/09/29/21%E7%BA%A7%E4%B8%89%E7%BF%BC%E6%8A%80%E6%9C%AF%E9%83%A8%E5%A4%8D%E8%AF%95(%E5%89%8D%E7%AB%AF)%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/">http://example.com/2021/09/29/21%E7%BA%A7%E4%B8%89%E7%BF%BC%E6%8A%80%E6%9C%AF%E9%83%A8%E5%A4%8D%E8%AF%95(%E5%89%8D%E7%AB%AF)%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/</a>
+                    <a href="http://example.com/2021/10/09/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">http://example.com/2021/10/09/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -890,12 +717,12 @@ div &#123;display: none&#125;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Thoughts/">
-                                    <span class="chip bg-color">Thoughts</span>
+                                <a href="/tags/%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">简单排序算法</span>
                                 </a>
                             
-                                <a href="/tags/Share/">
-                                    <span class="chip bg-color">Share</span>
+                                <a href="/tags/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/">
+                                    <span class="chip bg-color">时间复杂度</span>
                                 </a>
                             
                         </div>
@@ -1067,9 +894,10 @@ div &#123;display: none&#125;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/10/09/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
@@ -1087,9 +915,9 @@ div &#123;display: none&#125;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1102,6 +930,7 @@ div &#123;display: none&#125;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1124,13 +953,13 @@ div &#123;display: none&#125;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/23/XTUOJ-1290/">
+                <a href="/2021/09/29/21%E7%BA%A7%E4%B8%89%E7%BF%BC%E6%8A%80%E6%9C%AF%E9%83%A8%E5%A4%8D%E8%AF%95(%E5%89%8D%E7%AB%AF)%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="XTUOJ-1290">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="21级三翼技术部复试(前端)参考资料">
                         
-                        <span class="card-title">XTUOJ-1290</span>
+                        <span class="card-title">21级三翼技术部复试(前端)参考资料</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1141,14 +970,14 @@ div &#123;display: none&#125;
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Oj/" class="post-category">
-                                    Oj
+                            <a href="/categories/HTML-CSS-JS/" class="post-category">
+                                    HTML CSS JS
                                 </a>
                             
                             
@@ -1158,16 +987,12 @@ div &#123;display: none&#125;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/Thoughts/">
+                        <span class="chip bg-color">Thoughts</span>
                     </a>
                     
-                    <a href="/tags/Online-judgement/">
-                        <span class="chip bg-color">Online judgement</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%A6%99/">
-                        <span class="chip bg-color">妙</span>
+                    <a href="/tags/Share/">
+                        <span class="chip bg-color">Share</span>
                     </a>
                     
                 </div>
