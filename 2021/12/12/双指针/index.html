@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="HTTP协议基础, Appletree24,github">
+    <meta name="keywords" content="Appletree24,github">
     <meta name="description" content="永远年轻 永远热泪盈眶.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>HTTP协议基础 | It&#39;s Appletree24</title>
+    <title>It&#39;s Appletree24</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">HTTP协议基础</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -430,29 +430,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Thoughts/">
-                                <span class="chip bg-color">Thoughts</span>
-                            </a>
-                        
-                            <a href="/tags/HTTP/">
-                                <span class="chip bg-color">HTTP</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Thoughts/" class="post-category">
-                                Thoughts
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -461,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-19
+                    2021-12-12
                 </div>
                 
 
@@ -482,123 +465,434 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a><center>HTTP协议</center></h3><h4 id="1-何为HTTP协议"><a href="#1-何为HTTP协议" class="headerlink" title="1.何为HTTP协议"></a>1.何为HTTP协议</h4><p>HTTP协议又名超文本传输协议，是一种基于TCP/IP的传输协议，顾名思义，其传输的内容为超文本内容，在互联网早期，我们只能传输非二进制的文本，邮件间相互的来往也不能像现在一样插入文档、视频、音频等二进制内容，网页内也无法拥有现在我们可以看到的视频、图片等，于是便有了超文本传输协议，一种可以传输超越文本的内容的协议。</p>
-<p>HTTP协议是规定浏览器与服务器之间交互的一种协议，其他常见的协议还有FTP协议，规定两台电脑间传送文件所要遵守的协议，事实上，有许许多多的人们基于TCP/IP协议发明了许多不同的协议，甚至有人已经解决TCP/IP协议的弊端，但却并没有流行起来，可见TCP/IP应用范围之广。</p>
-<h4 id="2-HTTP协议都包括什么"><a href="#2-HTTP协议都包括什么" class="headerlink" title="2.HTTP协议都包括什么"></a>2.HTTP协议都包括什么</h4><pre><code class="line-numbers language-html">&lt;form action=&quot;DataBase.php&quot; method=&quot;POST&quot;&gt;
-    Name:&lt;input type=&quot;text&quot; name=&quot;ID&quot;&gt;
-    &lt;br&gt;&lt;br&gt;
-    &lt;input type=&quot;submit&quot; value=&quot;submit&quot;&gt;
-&lt;/form&gt;
+                <h3 id="Leetcode刷题笔记-双指针"><a href="#Leetcode刷题笔记-双指针" class="headerlink" title="Leetcode刷题笔记(双指针)"></a>Leetcode刷题笔记(双指针)</h3><p>2021/12/11</p>
+<hr/>
+
+<h4 id="1-何为双指针"><a href="#1-何为双指针" class="headerlink" title="1.何为双指针"></a>1.何为双指针</h4><p>双指针主要用来遍历数组，两个指针指向不同的元素，从而协同完成任务。我们也可以类比这个概念，推广到多个数组的多个指针。</p>
+<p>若两个指针指向同一数组，遍历方向相同且不会相交，可以称之为<strong>滑动窗口</strong>(两个指针包围的区域为当前的窗口)，经常用于区间搜索。</p>
+<p>若两个指针指向同一数组，但是遍历方向相反，那我们可以用来进行搜索，这时我们要搜索的数组往往需要排序好。</p>
+<hr>
+
+
+<h4 id="2-双指针类型"><a href="#2-双指针类型" class="headerlink" title="2.双指针类型"></a>2.双指针类型</h4><p>在目前的刷到过的题目种，遇到了两类双指针问题</p>
+<p>第一类是<strong>快慢指针</strong>，顾名思义，就是一个fast指针，一个slow指针，一前一后，一般用来解决链表中的问题。方向相同。只是一般，也有一些数组问题可以用快慢指针解决，所以如果按使用对象来分，是十分不严谨的。</p>
+<p>第二类是<strong>左右指针</strong>，实际上指的是两个索引值，一般用来解决数组中的问题。也有人叫这个方法对撞指针。方向相反。</p>
+<hr/>
+
+<h4 id="3-左右指针"><a href="#3-左右指针" class="headerlink" title="3.左右指针"></a>3.左右指针</h4><p>我打算先从左右指针来讲起，符合我大一先学习了数组再学习链表这一顺序，至少数据结构中顺序也是如此吧.</p>
+<h5 id="i-gt-二分查找"><a href="#i-gt-二分查找" class="headerlink" title="i&gt;二分查找"></a>i&gt;二分查找</h5><p>我们可以将二分查找看作为双指针的一种特殊情况，一般情况下会将二者区分开来，双指针类型的题目，指针通常是一步一步移动的，而在二分查找里，指针每次移动半个区间长度</p>
+<p>二分查找不过多在此文内赘述，只是当作一个非常简单的引入，关于详细的二分查找会另起一篇。在这里书写一个最简单的二分查找法</p>
+<pre><code class="line-numbers language-c++">class Solution&#123;
+public:
+    int BinarySearch(vector&lt;int&gt;&amp; nums,int target)&#123;
+        int left=0,right=nums.size()-1,mid;//因为是数组，所以我们要size-1
+        //我们添加等于号的原因是，如果当区间内只有一个数字时，无等号将会陷入死循环
+        while(left&lt;=right)&#123;
+            mid=left+(right-left)/2;//这里等价于(left+right)/2,但我们不这么写的原因是，为了防止数据太大炸掉
+            if(nums[mid]==target)&#123;
+                return mid;
+            &#125;else if(nums[mid]&gt;target)&#123;
+                right=mid-1;
+            &#125;else&#123;
+                left=mid+1;
+            &#125;
+        &#125;
+        return -1;//如果查找不到，我们返回-1
+    &#125;
+&#125;;
 </code></pre>
-<p>上述是一个非常简单的HTML表单，通过链接同级目录下一个叫做DataBase.php的php文件将表单内容以POST方法传输到php文件中。php文件则可以利用$_POST方法进行表单内容的获取。</p>
-<h5 id="何为表单"><a href="#何为表单" class="headerlink" title="何为表单:"></a>何为表单:</h5><p>表单是收集信息的一种工具，在HTML语法中使用”form”标签来实现，举个十分简单的例子，当你在注册你的游戏账号时，你将会在指定的输入框(input)内输入符合内容的信息，并且还会有一套检测机制检测你输入的内容究竟是否符合要求(正则表达式)，最终当你点击提交按钮后，会提示你账号注册成功，而你的信息就会被发送到指定的数据库，拿上述的PHP举例，信息并不是直接通过所谓“INSERT INTO”语句进行了插入，而是通过连接了一个PHP文件，PHP文件中使用不同类型的方法连接到了指定数据库，执行指定的语句，最终完成将信息插入的过程。</p>
-<h5 id="何为POST方法"><a href="#何为POST方法" class="headerlink" title="何为POST方法"></a>何为POST方法</h5><p>HTTP协议是一种规定服务器与浏览器进行交互的协议，既然交互那就要有各式各样的方法，人们为HTTP协议规定有如下请求方法:</p>
-<blockquote>
-<p>1.GET</p>
-<p>2.POST</p>
-<p>3.SEND</p>
-<p>4.HEAD</p>
-<p>5.TRACE</p>
-<p>……</p>
-</blockquote>
-<p>最常用的是POST、GET。</p>
-<p>POST和GET都可以理解为想服务器发送了信息，但两种方法其实有很大不同，例如POST方法会比GET方法略微安全一些，URL中不会直接显示所提交的内容。</p>
-<p>当你点击提交的按钮时，其实浏览器就向服务器发送了一个POST请求，服务器收到POST请求后与浏览器进行验证，通过后将你的信息录入库中，之后你在登陆账号时，就会从客户端(浏览器)向服务端(服务器)发送一个请求，服务器向数据库请求，数据库查询到你的最新密码，与你所输入的内容进行匹配，最后验证是否相同，相同则登陆成功，不相同则登陆失败。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IqiQMD"><img src="https://z3.ax1x.com/2021/11/19/IqiQMD.gif" alt="IqiQMD.gif"></a></p>
-<p>CGI是一种浏览器与你的服务器之间交互的程序，一般负责用来解释来自表单的信息，必须在网络服务器上进行运行。</p>
-<h5 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h5><p>当你在访问一些页面时，可能会遇到一些不知意义的数字，伴随而来的是网页的无法正常显示，最常见的应该就是404了、其次可能还有502、503、500等，这些数字其实就是人们按照一定规则所设置的HTTP状态码，用于向人们反馈到底你所请求的是个什么状态。</p>
-<p>比如当你看到404时，后面会跟随着“Not Found”，这代表404这个状态码翻译过来就是找不到的意思，服务器无法根据你客户端的请求找到资源。一个网站的404网页是必须要创建的，这有着十分重大的意义。</p>
-<p>502 Bad Gateway，当时体育课抢课时，报错的代码就是502和404，502则代表网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应。</p>
-<p>又比如403 Forbidden，顾名思义，就是服务端阻止了你的请求，拒绝了你。</p>
-<p>500 Internal Server Error 服务器内部错误，无法完成请求。</p>
-<p>上述代码都是错误的，有问题的，肯定是人们不想看到的，那人们想看到什么样子的呢，例如200，人们就非常喜欢看到。</p>
-<p>200代表OK，一般来说用于GET和POST请求，也就是说一切安然无恙，执行的井然有序后你就会看到200的状态码，但一般情况下你是看不到的，直接就正常浏览网页了，但是你还是要知道当你正常浏览网页时，其实状态码是200.</p>
-<p>状态码有将近二十来种，人们是怎么记住他们的呢，实际上是有分类标准的:</p>
-<p>状态码都是三位数字，人们按照开头的第一个数字进行划分。</p>
-<p>例如1开头的状态码就代表信息，服务器收到请求，需要请求者继续执行一个什么操作</p>
-<p>2开头就代表成功，也是人们最喜欢看到的一类状态码</p>
-<p>3开头就代表重定向，比如一些网站会做一个301跳转，一些用户仍然喜欢用www加在域名前进行网站的访问，为了避免不必要的麻烦，网站所有者会为这些网址做一个重定向跳转，帮助用户跳转到正确的页面。</p>
-<p>4开头就代表客户端错误，5开头则代表服务端错误，这些都是人们不想看到的状态码。</p>
-<h4 id="3-学习了HTTP协议，我能获得什么"><a href="#3-学习了HTTP协议，我能获得什么" class="headerlink" title="3.学习了HTTP协议，我能获得什么"></a>3.学习了HTTP协议，我能获得什么</h4><p>如果我们要聊你能获得什么的话题，首先我们要分类讨论一下。</p>
-<p>如果你比较喜欢研究算法，或者说你对计算机的了解仅仅只是算法一词，我要学一门效率极高的语言用天才程序员想出的效率极高的算法，那么我很抱歉的说一句，你学习HTTP协议可能并不能为你带来什么，而且可能你在后来学习数据结构时，也不觉得能带来什么，其实这些类比都有失妥当，比如HTTP协议其实根本就不是什么晦涩难懂的东西，他就是个协议而已，我甚至觉得学习它比你花几个小时学习一门新语言的语法还要快就可以解决，你只需要看，了解，记住。但是其实HTTP协议不能为你带来什么引起质变的东西，但我还是希望你可以试着学一学，技多不压身吗，何况连算法都不在话下，HTTP协议也不是问题了。</p>
-<p>如果你对计算机很感兴趣，觉得方方面面都很想学习，那我觉得你学习HTTP协议应该会兴奋，我自认为HTTP协议、TCP/IP协议这些前人已经深思熟虑制定好的规则是非常值得我们学习的，就好像数据结构、计算机组成原理、操作系统这些东西一样，你学完以后真的就能写出来操作系统，真的就可以用struct实现一个媲美人家已经写好的数组的功能吗？难道灵光一闪就能够想出和雷神之锤那种平方根倒数速算法一样的上帝算法吗？这当然不能，但意义在于你终于更加明白计算机的美丽之处，以及你所日常使用的东西其实都复杂无比，充满着人类的智慧，这还不够令人兴奋吗？</p>
-<h4 id="4-说了很多废话，HTTP协议到底能干些什么"><a href="#4-说了很多废话，HTTP协议到底能干些什么" class="headerlink" title="4.说了很多废话，HTTP协议到底能干些什么"></a>4.说了很多废话，HTTP协议到底能干些什么</h4><p>其实HTTP协议什么也不能干，他根本就不是个工具，他只是个协议，试问我们能让法律去判决哪个人该受什么样的刑罚吗？肯定不行。</p>
-<p>都是法官在依据法律执行罢了，HTTP协议也是如此，你现在已经知道了一套体系的运行规则，你当然就可以利用它。</p>
-<h4 id="5-举例"><a href="#5-举例" class="headerlink" title="5.举例"></a>5.举例</h4><p>举个例子。</p>
-<p>当你打开一个软件，在转圈加载时，就相当于你客户端已经在向服务端开始请求了，开始拉取信息。</p>
-<p>服务端返回后，出现了许许多多的等待你使用的功能。</p>
-<p><img src="https://z3.ax1x.com/2021/11/19/IqtIne.png"></p>
-<p>比如一个下面图片里的功能，填写许多信息，聪明人都能理解到了，这不就相当于我注册游戏账号吗，我填写对方要的信息，然后我把我的信息填到一个类似于表格的地方里，最后点击提交按钮交上去，然后他就告诉我我填的是否符合要求，成功了还是失败了。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IqUkad"><img src="https://z3.ax1x.com/2021/11/20/IqUkad.png" alt="IqUkad.png"></a></p>
-<p>这不就是个submit吗。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Iqth6O"><img src="https://z3.ax1x.com/2021/11/19/Iqth6O.png" alt="Iqth6O.png"></a></p>
-<p>好了，如果你真的读懂了，那么你现在应该就能联想到一套操作，我觉得稍微懂的都已经懂了。</p>
-<p>如果我可以有一台服务器，服务器上面可以定时部署一个任务，就类似于开游戏服务器时我写了一个sh脚本，每天凌晨都要给服务端备份，以免有一天游戏炸掉，我可以回档及时止损。但是现在不是什么备份止损，我们好像可以模拟一套HTTP请求，然后把脚本部署在服务端，实现远端执行。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IqUWLD"><img src="https://z3.ax1x.com/2021/11/20/IqUWLD.png" alt="IqUWLD.png"></a></p>
-<p>我们转换为代码其实就十分简单，短短40行就可以实现我们理想中的功能。</p>
-<p>首先我们import进来我们需要的模块，既然要模拟一套请求，那肯定要requests来模拟一套请求流程，中间的JSON利用json来编码。</p>
-<p>调用sender方法，我们可以轻松实现功能，把我们所需要的信息用抓包工具实现，抓包同样是一个很好玩的东西，很多网游其实都可以利用WPE抓包实现一些作弊功能，但这要说就扯得太远了，总之我们抓包是为了知道我们每次都给服务端提供了什么样的信息出去，我们既然要模拟，就要把这些东西填进去，对方才知道是我们。</p>
-<p>url就是要向对方服务端目录下的何处进行请求。</p>
-<p>cookies也是一个很有意思的东西，既然有很多用户都在使用一个功能，那么到底如何分辨谁是谁呢？于是乎每个用户都有一个专属于他的cookie，你的浏览器也会记录你的cookie，这就是所谓你在一些网站登陆过账号后，过几天再登陆，惊奇的发现竟然账号已经登陆了。</p>
-<p>下面是个重头戏，关于HTTP headers。</p>
-<p>HTTP headers是HTTP请求和响应的核心，一般来说它包含着客户端浏览器、请求页面、服务器相关的信息。</p>
-<p>当你在浏览器中输入了一个url时，你的浏览器通常会有如下的http请求</p>
-<pre><code class="line-numbers language-http">GET /tutorials/other/top-20-mysql-best-practices/ HTTP/1.1
-Host: net.tutsplus.comUser-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5 (.NET CLR 3.5.30729)
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Accept-Language: en-us,en;q=0.5
-Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-Keep-Alive: 300
-Connection: keep-alive
-Cookie: PHPSESSID=r2t5uvjq435r4q7ib3vtdjq120Pragma: no-cacheCache-Control: no-cache
+<p>二分查找是一种理解起来十分简单，时间复杂度非常优秀的算法，我们只需要O(logn)的时间复杂度就可以完成查找</p>
+<hr/>
+
+<p>相关题目:</p>
+<p>Leetcode 704 二分查找 代码同上述 不在此贴出解法</p>
+<hr>
+
+
+<p>2021大一C语言程序设计模拟考试 锐角三角形</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oTjhLQ"><img src="https://s4.ax1x.com/2021/12/11/oTjhLQ.png" alt="oTjhLQ.png"></a></p>
+<pre><code class="line-numbers language-c++">#include &quot;stdio.h&quot;//为了使用C风格的输入输出，加快速度
+#include &quot;algorithm&quot;
+using namespace std;
+int side[105];
+int main()&#123;
+    int t;
+    scanf(&quot;%d&quot;,&amp;t);
+    while(t--)&#123;
+        int n,ans=0;
+        scanf(&quot;%d&quot;,&amp;n);
+        for(int i=0;i&lt;n;++i)&#123;
+            scanf(&quot;%d&quot;,&amp;side[i]);
+        &#125;
+        sort(side,side+n);
+        for(int i=0;i&lt;n;++i)&#123;
+            for(int j=i+1;j&lt;n;++j)&#123;
+                int left=j+1,right=n-1,k=j;
+                while(left&lt;=right)&#123;
+                    int mid=left+(right-left)/2;
+                    if(side[mid]*side[mid]&lt;side[i]*side[i]+side[j]*side[j])&#123;
+                        k=mid;
+                        left=mid+1;
+                    &#125;
+                    else&#123;
+                        right=mid-1;
+                    &#125;
+                &#125;
+                ans+=k-j;
+            &#125;
+        &#125;
+        printf(&quot;%d\n&quot;,ans);
+    &#125;
+    return 0;
+&#125;
 </code></pre>
-<p>第一行被称作是Request Line，它描述请求的基本信息，剩下的部分就是HTTP headers了。</p>
-<p>当请求完毕后，会有下面的内容:</p>
-<pre><code class="line-numbers language-http">HTTP/1.x 200 OK
-Transfer-Encoding: chunkedDate: Sat, 28 Nov 2009 04:36:25 
-GMTServer: LiteSpeedConnection: closeX-Powered-By: W3 Total Cache/0.8Pragma: publicExpires: Sat, 28 Nov 2009 05:36:25 GMTEtag: &quot;pub1259380237;gz&quot;Cache-Control: max-age=3600, public
-Content-Type: text/html; charset=UTF-8
-Last-Modified: Sat, 28 Nov 2009 03:50:37
- GMTX-Pingback: http://net.tutsplus.com/xmlrpc.php
-Content-Encoding: gzipVary:
- Accept-Encoding, 
- Cookie, User-Agent&lt;!-- ... rest of the html ... 
+<hr>
+
+
+<p>Leetcode 278 第一个错误的版本</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oTvD6U"><img src="https://s4.ax1x.com/2021/12/11/oTvD6U.png" alt="oTvD6U.png"></a></p>
+<p>思路：</p>
+<p>我们不难理解，调用isBadVersion这个API所返回的类型为bool，也就是说，非零即一，且1之后的所有数字都会为1，就像是{0，0，0，0，0，1，1，1，1，1}这样，完美符合二分查找所需要的条件，数组有序。</p>
+<p>题目就是要我们寻找第一个为1的元素，返回其下标即可，综上，我们不难想到只需要利用二分查找，将区间逼至只有一个数即是。</p>
+<p>代码：</p>
+<pre><code class="line-numbers language-c++">//iSBadVersion已经定义完毕 无需我们敲入
+class Solution &#123;
+public:
+    int firstBadVersion(int n) &#123;
+        int left=1,right=n,mid;
+        while(left&lt;right)&#123;
+            mid=left+(right-left)/2;
+            if(isBadVersion(mid))&#123;
+                right=mid;
+            &#125;else&#123;
+                left=mid+1;
+            &#125;
+        &#125;
+        return left;
+    &#125;
+&#125;;
+//时间复杂度为O(logn) n为版本数量 空间复杂度为O(1) 我们需要常数空间保存若干变量
 </code></pre>
-<p>第一行就是status line，不多解释，英语通俗易懂。之外的内容就是http headers</p>
-<p>在你的浏览器中用F12打开开发人员测试工具，点击到Network里的headers便可以从浏览器看到这些内容了。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IqdEgP"><img src="https://z3.ax1x.com/2021/11/20/IqdEgP.png" alt="IqdEgP.png"></a></p>
-<p>HTTP headers里有一些常用属性:</p>
-<p>(1) Host：</p>
-<p>请求报头域主要用于指定被请求资源的Internet主机和端口号，它通常从HTTP URL中提取出来的，例如我们在浏览器中输入：<a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a></p>
-<p>浏览器发送的请求消息中，就会包含Host请求报头域，如下：</p>
-<p>Host：<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
-<p>(此处使用缺省端口号443，若指定了端口号，则变成：Host：指定端口号)</p>
-<p>(2)Referer</p>
-<p>当浏览器向web服务器发送请求的时候，一般会带上Referer，告诉服务器该请求是从哪个页面链接过来的，服务器借此可以获得一些信息用于处理。比如从我主页上链接到一个朋友那里，他的服务器就能够从HTTP Referer中统计出每天有多少用户点击我主页上的链接访问他的网站。</p>
-<p>(3)User-Agent</p>
-<p>这个对于爬虫比较重要 因为一般都需要添加该属性，否则稍微处理过的网站，都无法爬取。<br>       告诉HTTP服务器， 客户端使用的操作系统和浏览器的名称和版本。<br>       我们上网登陆论坛的时候，往往会看到一些欢迎信息，其中列出了你的操作系统的名称和版本，这往往让很多人感到很神奇，实际上，服务器应用程序就是从                                 User-Agent这个请求报头域中获取到这些信息。User-Agent请求报头域允许客户端将它的操作系统、浏览器和其它属性告诉服务器。<br>       例如： User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; CIBA; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET4.0C; InfoPath.2; .NET4.0E)</p>
-<p>应用程序版本“Mozilla/4.0”表bai示：你使用Maxthon 2.0 浏览du器使用 IE8 内核；<br>       版本标识“zhiMSIE 8.0”<br>       平台自身的dao识别信息“Windows NT 5.1”表示“操作系统为zhuan Windows XP”<br>        rident内核版本“Trident/4.0”，浏览器的一种内核，还有一种就是WebKit内核</p>
-<p>（4）Content-type</p>
-<p>表示后面的文档属于什么MIME类型。Servlet默认为text/plain，但通常需要显式地指定为text/html。由于经常要设置Content-Type，因此HttpServletResponse提供了一个专用的方法setContentType。</p>
-<p>常见的媒体格式类型如下：</p>
-<p>text/html ： HTML格式<br>text/plain ：纯文本格式<br>text/xml ： XML格式<br>image/gif ：gif图片格式<br>image/jpeg ：jpg图片格式<br>image/png：png图片格式<br>以application开头的媒体格式类型：</p>
-<p>application/xhtml+xml ：XHTML格式<br>application/xml ： XML数据格式<br>application/atom+xml ：Atom XML聚合格式<br>application/json ： JSON数据格式<br>application/pdf ：pdf格式(别人发的试卷、电子书籍、准考证等等)<br>application/msword ： Word文档格式<br>application/octet-stream ： 二进制流数据（如常见的文件下载）<br>application/x-www-form-urlencoded ： 中默认的encType，form表单数据被编码为key/value格式发送到服务器（表单默认的提交数据的格式）<br>另外一种常见的媒体格式是上传文件之时使用的：</p>
-<p>multipart/form-data ： 需要在表单中进行文件上传时，就需要使用该格式。<br>       （5）Accept-Language</p>
-<p>Accept-Langeuage：指出浏览器可以接受的语言种类，如en或en-us指英语，zh或者zh-cn指中文，当服务器能够提供一种以上的语言版本时要用到。</p>
-<p>（6）Cookie</p>
-<p>Cookie：浏览器用这个属性向服务器发送Cookie。Cookie是在浏览器中寄存的小型数据体，它可以记载和服务器相关的用户信息，也可以用来实现会话功能。</p>
-<p>依照着上述常用属性解释，不难理解headers花括号里所写的内容了。</p>
-<p>数据都写完后，我们就需要利用json库将这些信息转换为json的格式与服务端进行交互，至于为什么要换成JSON格式，这里有一个链接可以解释:</p>
-<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/20836506">解释</a></p>
-<p>通过jsondumps，我们将Python中的数据类型转换为JSON格式，并为这个新变量命名为Data，之后调用requests库中的post方法，填入规定的参数，发送我们的信息到指定的服务器上，之后返回res.text，这并不是代表返回了一个后缀为text的文件，而是使用了text这个方法，返回了指定网页的源代码。</p>
-<p>之后的两部分内容其实与模拟整个流程关系不大，不过多解释。</p>
-<p>整套脚本写好后，我们要如何部署呢，很幸运，某导论课上提到过云这一概念，懂得已经懂了，如果我们找一个云服务平台，将我们的脚本用云函数的方法放到上面，每天定时执行不就可以了吗。确实，毫无疑问是可行的。</p>
-<p>如此看来，知识真的改变生活了。</p>
-<p>文件:链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Xq9sBvwi7ko2W4j1HFlGoQ">https://pan.baidu.com/s/1Xq9sBvwi7ko2W4j1HFlGoQ</a> </p>
-<p>提取码: 7zd3 </p>
-<p>此脚本来源于互联网，本人不做任何负责，版权归作者所有，请于下载后24小时内删除。</p>
-<h4 id="6-声明"><a href="#6-声明" class="headerlink" title="6.声明"></a>6.声明</h4><p>本文中出现的所有图片均来源于网络，侵删。</p>
-<p>本文中出现的代码内容为网络内容，文章只负责技术层面的分析解释。</p>
+<hr>
+Leetcode 35 搜索插入位置
+
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/o7SEOU"><img src="https://s4.ax1x.com/2021/12/11/o7SEOU.png" alt="o7SEOU.png"></a></p>
+<p>思路：</p>
+<p>仁慈的简单题我重拳出击 我们发现，一查找元素 二数组有序 就已经想到要用二分查找了，并且本题还特意仁慈的告诉我们必须要实现O(logn)的算法，那必然就是二分查找了。</p>
+<p>有人可能会疑问，我们还要考虑目标值如果不在数组中，返回它要按序插入的位置，这样还能用二分查找吗，当然是可以。</p>
+<p>重新考虑题意，假如我们现在要在pos这个位置插入，它应该满足这样一个条件</p>
+<p>$$nums[pos-1]&lt;target&lt;=nums[pos]$$</p>
+<p>如果数组中现在存在这个值，要返回的索引也是pos，因此我们将两个条件合并，无论哪种情况，我们只需要输出在<strong>一个有序数组中第一个大于等于target的下标</strong>。</p>
+<pre><code class="line-numbers language-c++">class Solution &#123;
+public:
+    int searchInsert(vector&lt;int&gt;&amp; nums, int target) &#123;
+        int left=0,right=nums.size()-1,ans=nums.size();//我们这里设置一个ans为数组长度，可以省略边界条件的判断 当target大于数组中所有数时 我们需要插入到数组长度的位置
+        while(left&lt;=right)&#123;
+            //mid这句也可以写成int mid=((right-left)&gt;&gt;1)+left
+            int mid=left+(right-left)/2;
+            //当右指针移动超过左指针后，我们停止查找，终于找到了那一个数字
+            if(nums[mid]&gt;=target)&#123;
+                ans=mid;
+                right=mid-1;
+            &#125;else&#123;
+                left=mid+1;
+            &#125;
+        &#125;
+        return ans;
+    &#125;
+&#125;;
+</code></pre>
+<p>得益于C++强大的STL，我们还可以使用一句话解法(用一句话木马那味了)</p>
+<pre><code class="line-numbers language-c++">return lower_bound(nums.begin(),nums.end(),target) - nums.begin();
+//我们来解释一下lower_bound，其功能为在一个排序好的数组内进行二分查找，与之相对应的是upper_bound()
+//lower_bound( begin,end,num)：从数组的begin位置到end-1位置二分查找第一个大于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。
+//upper_bound( begin,end,num)：从数组的begin位置到end-1位置二分查找第一个大于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。
+</code></pre>
+<hr/>
+
+<p>Leetcode 167 [ 两数之和 II - 输入有序数组]</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/o71f6f"><img src="https://s4.ax1x.com/2021/12/11/o71f6f.png" alt="o71f6f.png"></a></p>
+<p>思路:经典Leetcode第一题两数之和的升级版本，我们还可以利用暴力的方法或者哈希表的方法进行解题，但是就没什么意思了，我们这次用二分查找来解决这个问题。</p>
+<p>先固定一个数字，然后第二个数字依次从左到右进行遍历，寻找其是否为<code>target-nums[i]</code>，如果是，那么我们就找到了，返回{i+1,mid+1}即可。为了提高效率，我们使用二分查找(数组已有序)，且每次均从当前固定的数字的右侧开始寻找。</p>
+<p>代码:</p>
+<pre><code class="line-numbers language-c++">class Solution &#123;
+public:
+    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; numbers, int target) &#123;
+        for(int i=0;i&lt;numbers.size();++i)&#123;
+            int left=i+1,right=numbers.size()-1;//left定义为i+1，每次从当前固定数字右侧开始
+            while(left&lt;=right)&#123;
+                int mid=left+((right-left)&gt;&gt;1);
+                if(numbers[mid]==target-numbers[i])&#123;
+                    return &#123;i+1,mid+1&#125;;
+                &#125;else if(numbers[mid]&gt;target-numbers[i])&#123;
+                    right=mid-1;
+                &#125;else&#123;
+                    left=mid+1;
+                &#125;
+            &#125;
+        &#125;
+        return &#123;-1,-1&#125;;
+    &#125;
+&#125;;
+</code></pre>
+<hr/>
+
+<h5 id="II-gt-除了二分查找之外的双指针例题"><a href="#II-gt-除了二分查找之外的双指针例题" class="headerlink" title="II&gt;除了二分查找之外的双指针例题"></a>II&gt;除了二分查找之外的双指针例题</h5><p>Leetcode 977 有序数组的平方</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/o7ab4S"><img src="https://s4.ax1x.com/2021/12/11/o7ab4S.png" alt="o7ab4S.png"></a></p>
+<hr/>
+
+<p>思路:</p>
+<p>​    首先最简单的方法就是将数组中的元素平方压入动态数组后进行排序即可。但这样问题在于时间复杂度为O(nlogn)</p>
+<p>​    双指针的思路有两种，我们一个一个说。</p>
+<p>​    第一种双指针的思路是，由于暴力方法没有充分利用数组nums已经按照升序排列这个条件，所以我们可以利用这点进行改进，不难发现，当负数平方后，呈单调递减排列，非负数平方后，呈单调递增排列，我们可以在数组中找到非负数与负数的交界点boundary，然后将数组平方，两个指针依次指向boundary和boundary+1，比较两个指针所代表元素的大小，将小的放入答案并且移动相应的指针，当一边的指针移动至边界时，另一边的元素顺序放入答案中即可。</p>
+<p>​    但上述这种双指针的思路还不是最优的，我们还有一种倒序双指针的思路。</p>
+<p>​    第二种双指针的思路，我们可以用两个指针分别指向0和n-1，每次比较两个指针对应的数，选择较大的那个逆序放入答案并移动指针。如果我们采用这种方法，那么就无需处理某一指针移动到边界的情况了。</p>
+<hr/>
+
+<p>代码；</p>
+<pre><code class="line-numbers language-c++">//第一种 暴力法
+class Solution &#123;
+public:
+    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) &#123;
+        vector&lt;int&gt; ans;
+        for(int num:nums)&#123;
+            ans.push_back(num*num);
+        &#125;
+        sort(ans.begin(),ans.end());
+        return ans;
+    &#125;
+&#125;;
+</code></pre>
+<pre><code class="line-numbers language-c++">//第一种双指针
+class Solution &#123;
+public:
+    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) &#123;
+        int n = nums.size();
+        int negative = -1;
+        for (int i = 0; i &lt; n; ++i) &#123;
+            if (nums[i] &lt; 0) &#123;
+                negative = i;
+            &#125; else &#123;
+                break;
+            &#125;
+        &#125;
+
+        vector&lt;int&gt; ans;
+        int i = negative, j = negative + 1;
+        while (i &gt;= 0 || j &lt; n) &#123;
+            if (i &lt; 0) &#123;
+                ans.push_back(nums[j] * nums[j]);
+                ++j;
+            &#125;
+            else if (j == n) &#123;
+                ans.push_back(nums[i] * nums[i]);
+                --i;
+            &#125;
+            else if (nums[i] * nums[i] &lt; nums[j] * nums[j]) &#123;
+                ans.push_back(nums[i] * nums[i]);
+                --i;
+            &#125;
+            else &#123;
+                ans.push_back(nums[j] * nums[j]);
+                ++j;
+            &#125;
+        &#125;
+        return ans;
+    &#125;
+&#125;;
+</code></pre>
+<pre><code class="line-numbers language-c++">//第二种双指针
+class Solution &#123;
+public:
+    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) &#123;
+        int n = nums.size();
+        vector&lt;int&gt; ans(n);
+        //pos从n-1开始
+        for (int i = 0, j = n - 1, pos = n - 1; i &lt;= j;) &#123;
+            if (nums[i] * nums[i] &gt; nums[j] * nums[j]) &#123;
+                ans[pos] = nums[i] * nums[i];
+                ++i;
+            &#125;
+            else &#123;
+                ans[pos] = nums[j] * nums[j];
+                --j;
+            &#125;
+            --pos;
+        &#125;
+        return ans;
+    &#125;
+&#125;;
+</code></pre>
+<hr/>
+
+<p>Leetcode 283 移动零</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oHn4bj"><img src="https://s4.ax1x.com/2021/12/11/oHn4bj.png" alt="oHn4bj.png"></a></p>
+<hr/>
+
+<p>思路：</p>
+<p>​    我们可以参考快排的思想，用一个待分割的元素坐中间点x，然后把所有小于等于x的元素放到x的左边，大于x的元素放到其右边</p>
+<p>​    我们可以用0当做这个中间点，把不等于0的元素放到左边，等于0的放到右边。使用两个指针i和j，只要<code>nums[i]!=0</code>，我们就交换nums[i]和nums[j]</p>
+<hr/>
+
+<p>代码：</p>
+<pre><code class="line-numbers language-c++">class Solution &#123;
+    public void moveZeroes(int[] nums) &#123;
+        if(nums==null) &#123;
+            return;
+        &#125;
+        //两个指针i和j
+        int j = 0;
+        for(int i=0;i&lt;nums.length;i++) &#123;
+            //当前元素!=0，就把其交换到左边，等于0的交换到右边
+            if(nums[i]!=0) &#123;
+                int tmp = nums[i];
+                nums[i] = nums[j];
+                nums[j++] = tmp;
+            &#125;
+        &#125;
+    &#125;
+&#125;    
+</code></pre>
+<hr/>
+
+<p>Leetcode 344 反转字符串</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oHdAQH"><img src="https://s4.ax1x.com/2021/12/12/oHdAQH.png" alt="oHdAQH.png"></a></p>
+<hr/>
+
+<p>思路：</p>
+<p>​    说实在的，这个题和上买那几个题根本没法比。</p>
+<p>​    一个指针指向头，一个指针指向尾，互相交换，最终两指针相遇结束即可</p>
+<hr/>
+
+<p>代码：</p>
+<pre><code class="line-numbers language-c++">class Solution&#123;
+public:
+    void reverseString(vector&lt;char&gt;&amp; s)&#123;
+        int left=0,right=s.size()-1;
+        //这里我们不加等号
+        while(left&lt;right)&#123;
+            swap(s[left],s[right]);
+            ++left;
+            --right;
+        &#125;
+    &#125;
+&#125;;
+</code></pre>
+<hr/>
+
+<p>Leetcode 19 删除链表的倒数第 N 个结点</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obGkwT"><img src="https://s4.ax1x.com/2021/12/12/obGkwT.png" alt="obGkwT.png"></a></p>
+<hr/>
+
+<p>思路：</p>
+<p>​        如果这是个数组，我们要删除倒数第N个元素，可以使用双指针，快慢指针指向同一个元素，首先让fast先移动n步，然后再让fast和slow同时移动，直到fast指向了数组的末尾，我们删掉slow所指向的下一个元素就行了。</p>
+<p>​        如果是链表的话，我们删除一个结点的理想操作最好不是指针指向这个结点去删除，这要会导致前后断节，理想的操作是指向要删除的结点的前一个结点，把指针指向下一个节点的下一个节点，然后把要删除的结点delete或者free掉就行。所以我们在数组的基础上改一改，首先我们还是让fast和slow指向同一个节点，然后先让fast走n+1步，为什么这里要n+1步呢，因为在数组中我们以移动到末尾元素来作为快指针停止的标准，而这里我们选择快指针移动到nullptr来作为结束，多走了一步，那我们前面就要补上一步(可能我说的不太好)。但实际上我们还是可以让快指针先移动n步，只不过就是while的判断条件变为指向的结点的指针域指向为nullptr，但这样对于链表来说，删除就不方便了。之后的操作便是一样的，让快慢指针一起移动，删除慢指针指向的下一个结点就行了。</p>
+<hr/>
+
+<p>代码：</p>
+<pre><code class="line-numbers language-c++">class Solution&#123;
+public:
+    struct ListNode&#123;
+      int val;
+      ListNode* next;
+      ListNode(int val):val(val),next(nullptr)&#123;&#125;
+    &#125;;
+    ListNode * removeNthFromEnd(ListNode* head,int n)&#123;
+        ListNode * dummyHead=new ListNode(0);
+        dummyHead-&gt;next-&gt;head;
+        ListNode* fast=dummyHead;
+        ListNode* slow=dummyHead;
+        while(n--&amp;&amp;fast!=NULL)&#123;
+            fast=fast-&gt;next;
+        &#125;
+        fast=fast-&gt;next;
+        while(fast!=NULL)&#123;
+            fast=fast-&gt;next;
+            slow=slow-&gt;next;
+        &#125;
+        ListNode* temp=slow-&gt;next;
+        slow-&gt;next=slow-&gt;next-&gt;next;
+        delete temp;//防止内存泄漏
+        return dummyHead-&gt;next;
+    &#125;
+&#125;;
+</code></pre>
+<hr/>
+
+<p>Leetcode 141 环形链表</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obdNUx"><img src="https://s4.ax1x.com/2021/12/12/obdNUx.png" alt="obdNUx.png"></a></p>
+<hr/>
+
+<p>思路：</p>
+<p>​        对于链表找环路的问题，有一个通用的解法——快慢指针(Floyd判圈法)。给定两个指针，分别命名slow和fast，起始位置在链表的开头。每次fast前进两步，slow前进一步。如果fast可以走到尽头，那么说明链表没有环路；如果fast可以无限走下去，那么说明一定有环路，且一定存在一个时刻slow和fast会相遇(fast先进入了圈子开始兜圈，后面slow进入，就相当于是一个追及相遇问题了)。当slow和fast第一次相遇时，我们将fast重新移动到链表开头，并且让slow和fast每次都进一步，当slow和fast第二次相遇时，相遇的节点即为环路的开始点。</p>
+<p>​        Leetcode上还把这个算法叫做龟兔赛跑法，形象生动，具体解释是一样的，但是一些说法可以帮助理解，比如</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obBXJP"><img src="https://s4.ax1x.com/2021/12/12/obBXJP.png" alt="obBXJP.png"></a></p>
+<hr/>
+
+<p>代码：</p>
+<pre><code class="line-numbers language-c++">//本题只是简单的判断是否为环形链表 暂时不用返回环路的开始点
+class Solution&#123;
+public:
+    bool hashCycle(ListNode* head)&#123;
+        if(head==nullptr||head-&gt;next=nullptr)&#123;
+            return false;
+        &#125;
+        ListNode* slow=head;
+        ListNode* fast=head-&gt;next;
+        //我们不能只判断一个fast是不是指向了nullptr这个条件，比如说fast-&gt;next如果也是nullptr，那么他肯定会到nullptr的，我们也需要把这种情况考虑进来
+        while(slow!=fast)&#123;
+            if(fast==nullptr||fast-&gt;next==nullptr)&#123;
+                return false;
+            &#125;
+            slow=slow-&gt;next;
+            fast=fast-&gt;next-&gt;next;
+        &#125;
+        return true;
+    &#125;
+&#125;;
+</code></pre>
+<hr/>
+
+<p>Leetcode 142 环形链表 II</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obc0R1"><img src="https://s4.ax1x.com/2021/12/12/obc0R1.png" alt="obc0R1.png"></a></p>
+<hr/>
+
+<p>思路：</p>
+<p>​        这题我们就可以使用完整版的弗洛伊德判圈法了。</p>
+<hr/>
+
+<p>代码：</p>
+<pre><code class="line-numbers language-c++">/**
+ * Definition for singly-linked list.
+ * struct ListNode &#123;
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) &#123;&#125;
+ * &#125;;
+ */
+class Solution &#123;
+public:
+    ListNode *detectCycle(ListNode *head) &#123;
+        ListNode * slow=head;
+        ListNode * fast=head;
+        //这里我们用do while，前面的快慢就可以指向同一结点了
+        do&#123;
+            if(!fast||!fast-&gt;next) return nullptr;
+            fast=fast-&gt;next-&gt;next;
+            slow=slow-&gt;next;&#125;while(fast!=slow);
+        //已判断出有环 下面我们寻找环结点入口
+        fast=head;
+        while(fast!=slow)&#123;
+            fast=fast-&gt;next;
+            slow=slow-&gt;next;
+        &#125;
+        return fast;
+    &#125;
+&#125;;
+</code></pre>
+<hr/>
+
+<p>2021/12/12 先写到这里 之后会继续更新题目和总结</p>
 
                 
             </div>
@@ -615,7 +909,7 @@ Content-Encoding: gzipVary:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Appletree24</a>
+                    <a href="/about" rel="external nofollow noreferrer">Appletree24(A fool)</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -625,7 +919,7 @@ Content-Encoding: gzipVary:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/11/19/HTTP%E5%8D%8F%E8%AE%AE/">http://example.com/2021/11/19/HTTP%E5%8D%8F%E8%AE%AE/</a>
+                    <a href="http://example.com/2021/12/12/%E5%8F%8C%E6%8C%87%E9%92%88/">http://example.com/2021/12/12/%E5%8F%8C%E6%8C%87%E9%92%88/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -638,7 +932,7 @@ Content-Encoding: gzipVary:
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Appletree24</a>
+                    <a href="/about" target="_blank">Appletree24(A fool)</a>
                     !
                 </span>
             </div>
@@ -662,15 +956,7 @@ Content-Encoding: gzipVary:
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Thoughts/">
-                                    <span class="chip bg-color">Thoughts</span>
-                                </a>
-                            
-                                <a href="/tags/HTTP/">
-                                    <span class="chip bg-color">HTTP</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -840,9 +1126,10 @@ Content-Encoding: gzipVary:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/12/12/%E5%8F%8C%E6%8C%87%E9%92%88/">
                     <div class="card-image">
@@ -860,9 +1147,9 @@ Content-Encoding: gzipVary:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -871,6 +1158,7 @@ Content-Encoding: gzipVary:
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -881,13 +1169,13 @@ Content-Encoding: gzipVary:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/10/27/csnpython/">
+                <a href="/2021/11/19/HTTP%E5%8D%8F%E8%AE%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CSN Python学习作业">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="HTTP协议基础">
                         
-                        <span class="card-title">CSN Python学习作业</span>
+                        <span class="card-title">HTTP协议基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -898,14 +1186,14 @@ Content-Encoding: gzipVary:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CsnLab/" class="post-category">
-                                    CsnLab
+                            <a href="/categories/Thoughts/" class="post-category">
+                                    Thoughts
                                 </a>
                             
                             
@@ -915,8 +1203,12 @@ Content-Encoding: gzipVary:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CsnLab/">
-                        <span class="chip bg-color">CsnLab</span>
+                    <a href="/tags/Thoughts/">
+                        <span class="chip bg-color">Thoughts</span>
+                    </a>
+                    
+                    <a href="/tags/HTTP/">
+                        <span class="chip bg-color">HTTP</span>
                     </a>
                     
                 </div>
