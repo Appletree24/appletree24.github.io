@@ -444,7 +444,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-12
+                    2022-01-04
                 </div>
                 
 
@@ -465,435 +465,212 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Leetcode刷题笔记-双指针"><a href="#Leetcode刷题笔记-双指针" class="headerlink" title="Leetcode刷题笔记(双指针)"></a>Leetcode刷题笔记(双指针)</h3><p>2021/12/11</p>
+                <center>计组笔记</center>
+
+<h4 id="一计算机硬件"><a href="#一计算机硬件" class="headerlink" title="一计算机硬件"></a>一计算机硬件</h4><h5 id="1-0初步了解"><a href="#1-0初步了解" class="headerlink" title="1.0初步了解"></a>1.0初步了解</h5><p>计算机硬件中通过高电平和低电平分别代表二进制中的1和0</p>
+<p>印刷电路板背后的纹路就是传递电平的“电线”，传递1和0</p>
+<p>CPU和内存条下的针脚，可以接受这些电平信号</p>
+<p>计算机进行加减这类的运算，本质上是在处理电信号</p>
+<h5 id="1-1计算机的发展"><a href="#1-1计算机的发展" class="headerlink" title="1.1计算机的发展"></a>1.1计算机的发展</h5><p>计算机系统=硬件+软件</p>
+<p>计算机性能的好坏取决于“软”、“硬”件功能的总和</p>
+<p>软件又分为系统软件和应用软件，其中系统软件用来管理整个计算机系统，应用软件则是按任务需要编制成的各种程序</p>
 <hr/>
 
-<h4 id="1-何为双指针"><a href="#1-何为双指针" class="headerlink" title="1.何为双指针"></a>1.何为双指针</h4><p>双指针主要用来遍历数组，两个指针指向不同的元素，从而协同完成任务。我们也可以类比这个概念，推广到多个数组的多个指针。</p>
-<p>若两个指针指向同一数组，遍历方向相同且不会相交，可以称之为<strong>滑动窗口</strong>(两个指针包围的区域为当前的窗口)，经常用于区间搜索。</p>
-<p>若两个指针指向同一数组，但是遍历方向相反，那我们可以用来进行搜索，这时我们要搜索的数组往往需要排序好。</p>
-<hr>
-
-
-<h4 id="2-双指针类型"><a href="#2-双指针类型" class="headerlink" title="2.双指针类型"></a>2.双指针类型</h4><p>在目前的刷到过的题目种，遇到了两类双指针问题</p>
-<p>第一类是<strong>快慢指针</strong>，顾名思义，就是一个fast指针，一个slow指针，一前一后，一般用来解决链表中的问题。方向相同。只是一般，也有一些数组问题可以用快慢指针解决，所以如果按使用对象来分，是十分不严谨的。</p>
-<p>第二类是<strong>左右指针</strong>，实际上指的是两个索引值，一般用来解决数组中的问题。也有人叫这个方法对撞指针。方向相反。</p>
+<h6 id="硬件的发展"><a href="#硬件的发展" class="headerlink" title="硬件的发展"></a>硬件的发展</h6><p>用来处理电信号的最小的基本单元叫做逻辑元件，第一台电子数字计算机采用电子管作为逻辑元件</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TTyylj"><img src="https://s4.ax1x.com/2022/01/02/TTyylj.png" alt="TTyylj.png"></a></p>
+<p>早期时程序员采用机器语言进行编程，在纸带机上进行编程，纸带上有孔的地方代表零，没孔的地方代表一，这里就引出了为什么采用bug来当作故障的原因，因为如果一只小虫子死在了你的纸带上，那么就会是一个黑色的小点，纸带机在读取你的纸带时，就会出现错误，于是乎就用bug来指故障</p>
+<p>用电子管当逻辑元件的特点是体积超大、耗电量也超大</p>
+<p>贝尔实验室出现了采用晶体管充当逻辑元件的计算机，很大程度的减少了占地面积和功耗，同时在这个时期出现了面向过程的程序设计语言<code>FORTRAN</code>，同时为了让计算机有自我管理的功能，完成一系列的任务，有了操作系统的雏形。但这时的计算机需要几万到几十万个晶体管，人们手工将其焊接在电路板上，有一个焊点出错就会导致整台计算机无法运行，所以还是非常的不可靠</p>
+<p>第三代便出现了中小规模的集成电路，集成电路将元件集成在基片上，功耗更小，大小更小，同时也更加可靠，于是乎高级语言迅速发展，并开始有了分时操作系统,但此时的计算机主要用于科学计算等专业用途</p>
+<p>第四代便是大规模、超大规模集成电路的时代，例如苹果的A13处理器，它的制造工艺是7nm，也就是说在这块处理器中，每个逻辑元件的宽度为7nm，薄薄一块的A13中有着85亿个晶体管。这时开始出现了“微处理器”(CPU)、微型计算机，同时个人计算机萌芽，操作系统有Windows、MacOS、Linux等。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TTWPT1"><img src="https://s4.ax1x.com/2022/01/02/TTWPT1.png" alt="TTWPT1.png"></a></p>
+<p>上图中的Pentium为奔腾处理器</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TTWY6g"><img src="https://s4.ax1x.com/2022/01/02/TTWY6g.png" alt="TTWY6g.png"></a></p>
+<p>摩尔定律：集成电路上可容纳的晶体管数目，约每隔18个月便会增加一倍，整体性能也将提升一倍</p>
 <hr/>
 
-<h4 id="3-左右指针"><a href="#3-左右指针" class="headerlink" title="3.左右指针"></a>3.左右指针</h4><p>我打算先从左右指针来讲起，符合我大一先学习了数组再学习链表这一顺序，至少数据结构中顺序也是如此吧.</p>
-<h5 id="i-gt-二分查找"><a href="#i-gt-二分查找" class="headerlink" title="i&gt;二分查找"></a>i&gt;二分查找</h5><p>我们可以将二分查找看作为双指针的一种特殊情况，一般情况下会将二者区分开来，双指针类型的题目，指针通常是一步一步移动的，而在二分查找里，指针每次移动半个区间长度</p>
-<p>二分查找不过多在此文内赘述，只是当作一个非常简单的引入，关于详细的二分查找会另起一篇。在这里书写一个最简单的二分查找法</p>
-<pre><code class="line-numbers language-c++">class Solution&#123;
-public:
-    int BinarySearch(vector&lt;int&gt;&amp; nums,int target)&#123;
-        int left=0,right=nums.size()-1,mid;//因为是数组，所以我们要size-1
-        //我们添加等于号的原因是，如果当区间内只有一个数字时，无等号将会陷入死循环
-        while(left&lt;=right)&#123;
-            mid=left+(right-left)/2;//这里等价于(left+right)/2,但我们不这么写的原因是，为了防止数据太大炸掉
-            if(nums[mid]==target)&#123;
-                return mid;
-            &#125;else if(nums[mid]&gt;target)&#123;
-                right=mid-1;
-            &#125;else&#123;
-                left=mid+1;
-            &#125;
-        &#125;
-        return -1;//如果查找不到，我们返回-1
-    &#125;
-&#125;;
-</code></pre>
-<p>二分查找是一种理解起来十分简单，时间复杂度非常优秀的算法，我们只需要O(logn)的时间复杂度就可以完成查找</p>
+<h5 id="1-2计算机硬件的基本组成"><a href="#1-2计算机硬件的基本组成" class="headerlink" title="1.2计算机硬件的基本组成"></a>1.2计算机硬件的基本组成</h5><p>ENIAC需要虽然在当时已经可以达到5K次/s的计算速度，但是却需要程序员通过手动接线来控制计算，也就是说，程序员手动接线的速度抵消了计算机的计算速度，于是冯诺依曼提出了“存储程序”的概念</p>
+<p><strong>存储程序指的是将指令以二进制代码的形式事先输入计算机的主存储器</strong>，然后按照其在存储器中的首地址执行程序的第一条指令，以后就按该程序的规定顺序执行其他指令，直至程序执行结束</p>
+<p>形象生动地说就是，ENIAC需要程序员说一句，计算机做一句，而存储程序使得程序员可以一口气告诉计算机需要做什么，之后计算机去执行相应的指令</p>
+<p>世界上第一台采用冯诺依曼结构的计算机为EDVAC</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7Ssd1"><img src="https://s4.ax1x.com/2022/01/02/T7Ssd1.png" alt="T7Ssd1.png"></a></p>
+<p>数据或是程序通过输入设备转换成机器可以识别的电平传给运算器，运算器可以把这些数据传给存储器令其进行存放，同时自身也可以进行算术运算(加减乘除)或是逻辑运算(与或非)，控制器则是可以通过电信号控制其他部件的功能工作。同时也可以解析来自存储器中的程序指令，比如从存储器中读取了一条加法指令，控制器就会告诉运算器做加法的操作，之后通过输出设备转换成人们熟悉的形式</p>
+<p>软件和硬件在逻辑上等效的原因是因为，如果我们想实现一个乘法运算，我们可以设计一种支持乘法运算的硬件电路，这样的优点是速度很快，但成本较大；或者我们也可以利用已有的可以进行加法运算的电路，在其基础上运用加法操作的软件执行多次加法操作来达到乘法的目的，这样的优点是成本较小，但时间就要更长一些</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T79RDH"><img src="https://s4.ax1x.com/2022/01/02/T79RDH.png" alt="T79RDH.png"></a></p>
+<p>因为冯诺依曼计算机以运算器为中心，我们本来是想把数据存储到存储器中，可现在不得不经过一次运算器，所以导致运算的效率下降；同时本来计算完的数据可以直接从存储器给到输出设备，但现在也要经过一次运算器才能到输出设备，还是一样的毛病</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7CrZj"><img src="https://s4.ax1x.com/2022/01/02/T7CrZj.png" alt="T7CrZj.png"></a></p>
+<p>现代计算机改进了冯诺依曼计算机的弊病，采用存储器作为计算机的中心。因为运算器和控制器是联系密切的两个部分，所以超大规模集成电路一般将这两个部分放在一个芯片上，也就是现在的CPU</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7PQf0"><img src="https://s4.ax1x.com/2022/01/02/T7PQf0.png" alt="T7PQf0.png"></a></p>
+<p>计组中的主机与现实生活中的主机含义不同，计组中的主机指的是仅包含运算器与控制器(CPU)以及主存储器(内存)的硬件部分，而现实生活中的主机还会有风扇、硬盘等，其次存储器又可分为主存和辅存两种，其中主存即为内存，而辅存则是硬盘(固态、机械)，而其中只有主存才属于主机的范畴，辅存则是属于I/O设备，例如手机中的APP则是存储在辅存中，只有当APP进行工作时，才会把数据或程序传到主存中。</p>
 <hr/>
 
-<p>相关题目:</p>
-<p>Leetcode 704 二分查找 代码同上述 不在此贴出解法</p>
-<hr>
-
-
-<p>2021大一C语言程序设计模拟考试 锐角三角形</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oTjhLQ"><img src="https://s4.ax1x.com/2021/12/11/oTjhLQ.png" alt="oTjhLQ.png"></a></p>
-<pre><code class="line-numbers language-c++">#include &quot;stdio.h&quot;//为了使用C风格的输入输出，加快速度
-#include &quot;algorithm&quot;
-using namespace std;
-int side[105];
-int main()&#123;
-    int t;
-    scanf(&quot;%d&quot;,&amp;t);
-    while(t--)&#123;
-        int n,ans=0;
-        scanf(&quot;%d&quot;,&amp;n);
-        for(int i=0;i&lt;n;++i)&#123;
-            scanf(&quot;%d&quot;,&amp;side[i]);
-        &#125;
-        sort(side,side+n);
-        for(int i=0;i&lt;n;++i)&#123;
-            for(int j=i+1;j&lt;n;++j)&#123;
-                int left=j+1,right=n-1,k=j;
-                while(left&lt;=right)&#123;
-                    int mid=left+(right-left)/2;
-                    if(side[mid]*side[mid]&lt;side[i]*side[i]+side[j]*side[j])&#123;
-                        k=mid;
-                        left=mid+1;
-                    &#125;
-                    else&#123;
-                        right=mid-1;
-                    &#125;
-                &#125;
-                ans+=k-j;
-            &#125;
-        &#125;
-        printf(&quot;%d\n&quot;,ans);
-    &#125;
-    return 0;
-&#125;
-</code></pre>
-<hr>
-
-
-<p>Leetcode 278 第一个错误的版本</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oTvD6U"><img src="https://s4.ax1x.com/2021/12/11/oTvD6U.png" alt="oTvD6U.png"></a></p>
-<p>思路：</p>
-<p>我们不难理解，调用isBadVersion这个API所返回的类型为bool，也就是说，非零即一，且1之后的所有数字都会为1，就像是{0，0，0，0，0，1，1，1，1，1}这样，完美符合二分查找所需要的条件，数组有序。</p>
-<p>题目就是要我们寻找第一个为1的元素，返回其下标即可，综上，我们不难想到只需要利用二分查找，将区间逼至只有一个数即是。</p>
-<p>代码：</p>
-<pre><code class="line-numbers language-c++">//iSBadVersion已经定义完毕 无需我们敲入
-class Solution &#123;
-public:
-    int firstBadVersion(int n) &#123;
-        int left=1,right=n,mid;
-        while(left&lt;right)&#123;
-            mid=left+(right-left)/2;
-            if(isBadVersion(mid))&#123;
-                right=mid;
-            &#125;else&#123;
-                left=mid+1;
-            &#125;
-        &#125;
-        return left;
-    &#125;
-&#125;;
-//时间复杂度为O(logn) n为版本数量 空间复杂度为O(1) 我们需要常数空间保存若干变量
-</code></pre>
-<hr>
-Leetcode 35 搜索插入位置
-
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/o7SEOU"><img src="https://s4.ax1x.com/2021/12/11/o7SEOU.png" alt="o7SEOU.png"></a></p>
-<p>思路：</p>
-<p>仁慈的简单题我重拳出击 我们发现，一查找元素 二数组有序 就已经想到要用二分查找了，并且本题还特意仁慈的告诉我们必须要实现O(logn)的算法，那必然就是二分查找了。</p>
-<p>有人可能会疑问，我们还要考虑目标值如果不在数组中，返回它要按序插入的位置，这样还能用二分查找吗，当然是可以。</p>
-<p>重新考虑题意，假如我们现在要在pos这个位置插入，它应该满足这样一个条件</p>
-<p>$$nums[pos-1]&lt;target&lt;=nums[pos]$$</p>
-<p>如果数组中现在存在这个值，要返回的索引也是pos，因此我们将两个条件合并，无论哪种情况，我们只需要输出在<strong>一个有序数组中第一个大于等于target的下标</strong>。</p>
-<pre><code class="line-numbers language-c++">class Solution &#123;
-public:
-    int searchInsert(vector&lt;int&gt;&amp; nums, int target) &#123;
-        int left=0,right=nums.size()-1,ans=nums.size();//我们这里设置一个ans为数组长度，可以省略边界条件的判断 当target大于数组中所有数时 我们需要插入到数组长度的位置
-        while(left&lt;=right)&#123;
-            //mid这句也可以写成int mid=((right-left)&gt;&gt;1)+left
-            int mid=left+(right-left)/2;
-            //当右指针移动超过左指针后，我们停止查找，终于找到了那一个数字
-            if(nums[mid]&gt;=target)&#123;
-                ans=mid;
-                right=mid-1;
-            &#125;else&#123;
-                left=mid+1;
-            &#125;
-        &#125;
-        return ans;
-    &#125;
-&#125;;
-</code></pre>
-<p>得益于C++强大的STL，我们还可以使用一句话解法(用一句话木马那味了)</p>
-<pre><code class="line-numbers language-c++">return lower_bound(nums.begin(),nums.end(),target) - nums.begin();
-//我们来解释一下lower_bound，其功能为在一个排序好的数组内进行二分查找，与之相对应的是upper_bound()
-//lower_bound( begin,end,num)：从数组的begin位置到end-1位置二分查找第一个大于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。
-//upper_bound( begin,end,num)：从数组的begin位置到end-1位置二分查找第一个大于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标。
-</code></pre>
+<h5 id="1-3各个硬件的工作原理"><a href="#1-3各个硬件的工作原理" class="headerlink" title="1.3各个硬件的工作原理"></a>1.3各个硬件的工作原理</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7FtiR"><img src="https://s4.ax1x.com/2022/01/02/T7FtiR.png" alt="T7FtiR.png"></a></p>
+<p>关于主存储器，可以通过类似菜鸟驿站的方式来理解，CPU即是取件人，将要取走的数据所在的地址告诉给MAR，MAR再从存储体中找到相应的数据存放在MDR中，之后通过线路传给CPU，不同的是，CPU也可以写入数据到主存储器中，CPU将要写入数据到哪个地址放在MAR中，将要存储的数据放在MDR中，再通过控制总线告诉主存储器要进行的是存的操作，这三个部分一起使得主存储器写入这一条数据</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7AMbF"><img src="https://s4.ax1x.com/2022/01/02/T7AMbF.png" alt="T7AMbF.png"></a></p>
+<p>存储体中又存在的一个个存储单元，每个存储单元中存放一串二进制代码，而存储单元中二进制代码的组合叫做存储字，存储字长则代表一个存储单元中能存放二进制代码的位数，而存储元则是存储二进制的电子元件(现在是现实世界中的硬件层面)，由多个存储元以及一些电路就组成了存储单元，存储元利用电容的方法来存储二进制。MAR通过存放的地址来去相应的存储体中找到数据，所以MAR的位数就反映了存储单元的个数，而MDR则是将找到的数据存放在其中，于是MDR的位数就与存储字长相对应</p>
+<p>例如：</p>
+<blockquote>
+<p>MAR=4位-&gt;总共有2<sup>4</sup>个存储单元</p>
+<p>解释：首先要注意，地址是从0开始计数的，由于MAR为4位，也就是有4个bit，而4位二进制最大的数为1111，也就是15，所以从0000-1111一共16个数字</p>
+<p>MDR=16位-&gt;每个存储单元可存放16bit，1个字(word)=16bit</p>
+<p>一个字节与一个字不同，一个字节有8位；1B=1个字节=8bit，而1b=1bit</p>
+<p>例如100Mbps的宽带，就代表ps(per second)，每秒钟可以传输100M这么多bit的数据，我们购买100M的宽带，下载速度最多是10MB/s，这是因为下载器中大多数以B为单位，一般情况下两者为十分之一的关系</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7edSA"><img src="https://s4.ax1x.com/2022/01/02/T7edSA.png" alt="T7edSA.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7ezm6"><img src="https://s4.ax1x.com/2022/01/02/T7ezm6.png" alt="T7ezm6.png"></a></p>
+<p>控制器由CU、IR、PC三部分组成，其中CU为核心部件，其内部有十分复杂的电路，如果我们要完成一条指令，也就是一条代码，我们首先要从PC中通过这条指令的地址去存储器中找到它，之后通过IR存放当前要执行的指令，CU分析这条指令，最后控制单元执行指令</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7mLE8"><img src="https://s4.ax1x.com/2022/01/02/T7mLE8.png" alt="T7mLE8.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7uUW4"><img src="https://s4.ax1x.com/2022/01/02/T7uUW4.png" alt="T7uUW4.png"></a></p>
+<blockquote>
+<p>1.首先从主存地址为0的位置开始，将0放在PC中</p>
+<p>2.PC通过控制总线使得MAR中存入0，并在存储体中寻找主存地址为0的指令</p>
+<p>3.将主存储器中的MAR中所存放的地址所对应的数据放到MDR中</p>
+<p>4.MDR再通过线路将指令传给IR，存放当前要执行的指令，要注意的是此步操作进行结束后，程序计数器(PC)的自增功能就已经执行了，此时(PC)=1</p>
+<p>5.IR将指令的操作码送给CU，CU通过分析操作码可以得出要执行什么类型的指令</p>
+<p>6.CU得知此次要进行的是“取数”操作后，IR通过控制总线将地址码送到MAR，注意此时传输的地址码为二进制，要转换为十进制</p>
+<p>7.MAR根据主存地址到存储体中找到相应的指令，将数据传给MDR</p>
+<p>8.MDR将存放的数据通过线路传给ACC，ACC记录要进行运算的数据，此时完成了取数的操作</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/T7zO0A"><img src="https://s4.ax1x.com/2022/01/03/T7zO0A.png" alt="T7zO0A.png"></a></p>
+<blockquote>
+<p>1.上一步操作进行完毕后，PC中存放的数字为1，于是PC通过线路将MAR中的主存地址变为1</p>
+<p>2.根据MAR中主存地址为1，去存储体中寻找主存地址为1的指令存放到MDR中</p>
+<p>3.MDR将存放的指令存到IR中，IR存入当前要执行的指令</p>
+<p>4.IR将其中的指令给到CU中，CU通过分析操作码可以知道此次要进行的是乘法操作，此时PC也进行了自增一的操作</p>
+<p>5.得知要进行的是乘法操作后，IR将指令的地址码送给MAR</p>
+<p>6.MAR根据收到的地址码在主存储器中寻找对应的主存地址，并将对应的数据存放到MDR中</p>
+<p>7.MDR将数据存放至MQ，此时为何将3存放至MQ中，是因为3作为乘数</p>
+<p>8.ACC将已存储的上步中的值2存放至X中，X中存放被乘数</p>
+<p>9.ALU联系MQ与X进行乘法运算</p>
+<p><strong>注意这里乘积太大，需要用MQ辅助存储，因为如果两个16位的数相乘，会得出32位的结果，一个部分可能难以存储，所以要将乘积高位和乘积地位分别存储在ACC和MQ中</strong></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THpGrQ"><img src="https://s4.ax1x.com/2022/01/03/THpGrQ.png" alt="THpGrQ.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THpU5q"><img src="https://s4.ax1x.com/2022/01/03/THpU5q.png" alt="THpU5q.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THprMF"><img src="https://s4.ax1x.com/2022/01/03/THprMF.png" alt="THprMF.png"></a></p>
 <hr/>
 
-<p>Leetcode 167 [ 两数之和 II - 输入有序数组]</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/o71f6f"><img src="https://s4.ax1x.com/2021/12/11/o71f6f.png" alt="o71f6f.png"></a></p>
-<p>思路:经典Leetcode第一题两数之和的升级版本，我们还可以利用暴力的方法或者哈希表的方法进行解题，但是就没什么意思了，我们这次用二分查找来解决这个问题。</p>
-<p>先固定一个数字，然后第二个数字依次从左到右进行遍历，寻找其是否为<code>target-nums[i]</code>，如果是，那么我们就找到了，返回{i+1,mid+1}即可。为了提高效率，我们使用二分查找(数组已有序)，且每次均从当前固定的数字的右侧开始寻找。</p>
-<p>代码:</p>
-<pre><code class="line-numbers language-c++">class Solution &#123;
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; numbers, int target) &#123;
-        for(int i=0;i&lt;numbers.size();++i)&#123;
-            int left=i+1,right=numbers.size()-1;//left定义为i+1，每次从当前固定数字右侧开始
-            while(left&lt;=right)&#123;
-                int mid=left+((right-left)&gt;&gt;1);
-                if(numbers[mid]==target-numbers[i])&#123;
-                    return &#123;i+1,mid+1&#125;;
-                &#125;else if(numbers[mid]&gt;target-numbers[i])&#123;
-                    right=mid-1;
-                &#125;else&#123;
-                    left=mid+1;
-                &#125;
-            &#125;
-        &#125;
-        return &#123;-1,-1&#125;;
-    &#125;
-&#125;;
-</code></pre>
+<h5 id="1-4计算机的系统层次"><a href="#1-4计算机的系统层次" class="headerlink" title="1.4计算机的系统层次"></a>1.4计算机的系统层次</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TH9EWV"><img src="https://s4.ax1x.com/2022/01/03/TH9EWV.png" alt="TH9EWV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TH9DYt"><img src="https://s4.ax1x.com/2022/01/03/TH9DYt.png" alt="TH9DYt.png"></a></p>
+<p>我们将编译、汇编、解释程序统称为“翻译程序”</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THCJNn"><img src="https://s4.ax1x.com/2022/01/03/THCJNn.png" alt="THCJNn.png"></a></p>
+<p>此处的透明指程序员是不知道具体的实现方法的</p>
 <hr/>
 
-<h5 id="II-gt-除了二分查找之外的双指针例题"><a href="#II-gt-除了二分查找之外的双指针例题" class="headerlink" title="II&gt;除了二分查找之外的双指针例题"></a>II&gt;除了二分查找之外的双指针例题</h5><p>Leetcode 977 有序数组的平方</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/o7ab4S"><img src="https://s4.ax1x.com/2021/12/11/o7ab4S.png" alt="o7ab4S.png"></a></p>
+<h5 id="1-5计算机的性能指标"><a href="#1-5计算机的性能指标" class="headerlink" title="1.5计算机的性能指标"></a>1.5计算机的性能指标</h5><h6 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THkXJs"><img src="https://s4.ax1x.com/2022/01/03/THkXJs.png" alt="THkXJs.png"></a></p>
+<p>*<em>Eg:MAR现在有32位，而MDR有8位，则理论上最多的内存为2<sup>32</sup><em>8=4G</em></em></p>
+<h6 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THAf7F"><img src="https://s4.ax1x.com/2022/01/03/THAf7F.png" alt="THAf7F.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THE91I"><img src="https://s4.ax1x.com/2022/01/03/THE91I.png" alt="THE91I.png"></a><br>主频高的CPU不一定比主频低的CPU快，原因是二者的平均CPI大小是不确定的；当二者的CPI相同时，也不能说主频高的CPU就一定更快，因为有可能A不支持乘法指令，只能用多次加法实现乘法；而B则支持乘法指令</p>
+<h6 id="系统整体"><a href="#系统整体" class="headerlink" title="系统整体"></a>系统整体</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THEyUe"><img src="https://s4.ax1x.com/2022/01/03/THEyUe.png" alt="THEyUe.png"></a></p>
 <hr/>
 
-<p>思路:</p>
-<p>​    首先最简单的方法就是将数组中的元素平方压入动态数组后进行排序即可。但这样问题在于时间复杂度为O(nlogn)</p>
-<p>​    双指针的思路有两种，我们一个一个说。</p>
-<p>​    第一种双指针的思路是，由于暴力方法没有充分利用数组nums已经按照升序排列这个条件，所以我们可以利用这点进行改进，不难发现，当负数平方后，呈单调递减排列，非负数平方后，呈单调递增排列，我们可以在数组中找到非负数与负数的交界点boundary，然后将数组平方，两个指针依次指向boundary和boundary+1，比较两个指针所代表元素的大小，将小的放入答案并且移动相应的指针，当一边的指针移动至边界时，另一边的元素顺序放入答案中即可。</p>
-<p>​    但上述这种双指针的思路还不是最优的，我们还有一种倒序双指针的思路。</p>
-<p>​    第二种双指针的思路，我们可以用两个指针分别指向0和n-1，每次比较两个指针对应的数，选择较大的那个逆序放入答案并移动指针。如果我们采用这种方法，那么就无需处理某一指针移动到边界的情况了。</p>
+<h4 id="二-数据的表示和运算"><a href="#二-数据的表示和运算" class="headerlink" title="二.数据的表示和运算"></a>二.数据的表示和运算</h4><h5 id="2-1进位计数制"><a href="#2-1进位计数制" class="headerlink" title="2.1进位计数制"></a>2.1进位计数制</h5><p>位权：由位置所确定的权重，例如985.5的位权就是10<sup>0</sup>，8的位权就是10<sup>1</sup></p>
+<p>基数：每个数码位所用到的不同符号的个数，r进制的基数为r</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THGz4I"><img src="https://s4.ax1x.com/2022/01/03/THGz4I.png" alt="THGz4I.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THw3Ss"><img src="https://s4.ax1x.com/2022/01/03/THw3Ss.png" alt="THw3Ss.png"></a></p>
+<p>要注意，转换为对应的进制时，要根据所算出的十进制数转换为相应的要转换为的进制数中的数字</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THwDp9"><img src="https://s4.ax1x.com/2022/01/03/THwDp9.png" alt="THwDp9.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TH03ND"><img src="https://s4.ax1x.com/2022/01/03/TH03ND.png" alt="TH03ND.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TH0vVK"><img src="https://s4.ax1x.com/2022/01/03/TH0vVK.png" alt="TH0vVK.png"></a></p>
 <hr/>
 
-<p>代码；</p>
-<pre><code class="line-numbers language-c++">//第一种 暴力法
-class Solution &#123;
-public:
-    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) &#123;
-        vector&lt;int&gt; ans;
-        for(int num:nums)&#123;
-            ans.push_back(num*num);
-        &#125;
-        sort(ans.begin(),ans.end());
-        return ans;
-    &#125;
-&#125;;
-</code></pre>
-<pre><code class="line-numbers language-c++">//第一种双指针
-class Solution &#123;
-public:
-    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) &#123;
-        int n = nums.size();
-        int negative = -1;
-        for (int i = 0; i &lt; n; ++i) &#123;
-            if (nums[i] &lt; 0) &#123;
-                negative = i;
-            &#125; else &#123;
-                break;
-            &#125;
-        &#125;
-
-        vector&lt;int&gt; ans;
-        int i = negative, j = negative + 1;
-        while (i &gt;= 0 || j &lt; n) &#123;
-            if (i &lt; 0) &#123;
-                ans.push_back(nums[j] * nums[j]);
-                ++j;
-            &#125;
-            else if (j == n) &#123;
-                ans.push_back(nums[i] * nums[i]);
-                --i;
-            &#125;
-            else if (nums[i] * nums[i] &lt; nums[j] * nums[j]) &#123;
-                ans.push_back(nums[i] * nums[i]);
-                --i;
-            &#125;
-            else &#123;
-                ans.push_back(nums[j] * nums[j]);
-                ++j;
-            &#125;
-        &#125;
-        return ans;
-    &#125;
-&#125;;
-</code></pre>
-<pre><code class="line-numbers language-c++">//第二种双指针
-class Solution &#123;
-public:
-    vector&lt;int&gt; sortedSquares(vector&lt;int&gt;&amp; nums) &#123;
-        int n = nums.size();
-        vector&lt;int&gt; ans(n);
-        //pos从n-1开始
-        for (int i = 0, j = n - 1, pos = n - 1; i &lt;= j;) &#123;
-            if (nums[i] * nums[i] &gt; nums[j] * nums[j]) &#123;
-                ans[pos] = nums[i] * nums[i];
-                ++i;
-            &#125;
-            else &#123;
-                ans[pos] = nums[j] * nums[j];
-                --j;
-            &#125;
-            --pos;
-        &#125;
-        return ans;
-    &#125;
-&#125;;
-</code></pre>
+<h5 id="2-2BCD码-用二进制编码的十进制"><a href="#2-2BCD码-用二进制编码的十进制" class="headerlink" title="2.2BCD码(用二进制编码的十进制)"></a>2.2BCD码(用二进制编码的十进制)</h5><h6 id="8421码"><a href="#8421码" class="headerlink" title="8421码"></a>8421码</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THfTPI"><img src="https://s4.ax1x.com/2022/01/03/THfTPI.png" alt="THfTPI.png"></a></p>
+<p>8421码即用四位二进制来表示十进制数，抛去剩余的6位冗余。8421分别就是二进制的前四位对应的位权，所以可以与十进制中的1-9一一建立映射关系。但当两个8421码相加的结果不在映射表中时，就需要为结果的8421码加一个六对应的8421码，这时肯定可以进位，后四位正好就是对应的个位数，而最前面的数字进行补位之后正好就是对应的十位数字</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/THI6Te"><img src="https://s4.ax1x.com/2022/01/03/THI6Te.png" alt="THI6Te.png"></a></p>
+<p>2421码中有一个规定，0-4的第一位都是0，而5-9的第一位都是1，这是因为如果要表示5这个数字，可以有4+1和2+2+1这两种实现方式，也就是会有0101和1011这两种，为了防止出现歧义，故做出了这样的规定</p>
 <hr/>
 
-<p>Leetcode 283 移动零</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oHn4bj"><img src="https://s4.ax1x.com/2021/12/11/oHn4bj.png" alt="oHn4bj.png"></a></p>
+<h5 id="2-3字符与字符串"><a href="#2-3字符与字符串" class="headerlink" title="2.3字符与字符串"></a>2.3字符与字符串</h5><h6 id="ASCII码"><a href="#ASCII码" class="headerlink" title="ASCII码"></a>ASCII码</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tbp3XF"><img src="https://s4.ax1x.com/2022/01/03/Tbp3XF.png" alt="Tbp3XF.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TbCDdH">!(https://s4.ax1x.com/2022/01/03/TbCDdH.png)</a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TbCHWq"><img src="https://s4.ax1x.com/2022/01/03/TbCHWq.png" alt="TbCHWq.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tbk16x"><img src="https://s4.ax1x.com/2022/01/03/Tbk16x.png" alt="Tbk16x.png"></a></p>
 <hr/>
 
-<p>思路：</p>
-<p>​    我们可以参考快排的思想，用一个待分割的元素坐中间点x，然后把所有小于等于x的元素放到x的左边，大于x的元素放到其右边</p>
-<p>​    我们可以用0当做这个中间点，把不等于0的元素放到左边，等于0的放到右边。使用两个指针i和j，只要<code>nums[i]!=0</code>，我们就交换nums[i]和nums[j]</p>
+<h5 id="2-4奇偶校验码"><a href="#2-4奇偶校验码" class="headerlink" title="2.4奇偶校验码"></a>2.4奇偶校验码</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TbYfPA"><img src="https://s4.ax1x.com/2022/01/03/TbYfPA.png" alt="TbYfPA.png"></a></p>
+<p>当码距为1时，无检错能力；当码距为2时，有检错能力；当码距大于等于3时，若设计合理，可能具有检错、纠错的能力</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TbUGKP"><img src="https://s4.ax1x.com/2022/01/03/TbUGKP.png" alt="TbUGKP.png"></a></p>
+<p>采用奇校验码的方式时，需要保证整个校验码中1的个数为奇数，例如1001101，其中1有四位，我们在开头补上一位1，就有了五位1，形成了奇校验码，以此类推，偶检验码则是保证校验码中的1为偶数个即可。需要注意的是，奇偶校验码只能验证发生奇数个位错误情况，当发生偶数个位错误时，同样无法检验出来</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TbBClj"><img src="https://s4.ax1x.com/2022/01/03/TbBClj.png" alt="TbBClj.png"></a></p>
 <hr/>
 
-<p>代码：</p>
-<pre><code class="line-numbers language-c++">class Solution &#123;
-    public void moveZeroes(int[] nums) &#123;
-        if(nums==null) &#123;
-            return;
-        &#125;
-        //两个指针i和j
-        int j = 0;
-        for(int i=0;i&lt;nums.length;i++) &#123;
-            //当前元素!=0，就把其交换到左边，等于0的交换到右边
-            if(nums[i]!=0) &#123;
-                int tmp = nums[i];
-                nums[i] = nums[j];
-                nums[j++] = tmp;
-            &#125;
-        &#125;
-    &#125;
-&#125;    
-</code></pre>
+<h5 id="2-5海明校验码-汉明码"><a href="#2-5海明校验码-汉明码" class="headerlink" title="2.5海明校验码(汉明码)"></a>2.5海明校验码(汉明码)</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tbfohn"><img src="https://s4.ax1x.com/2022/01/03/Tbfohn.png" alt="Tbfohn.png"></a></p>
+<p>海明校验码的思想是，我们可以将信息位分组，为每组进行偶检验，这样就代表每个组都会有一个检验位，也就是说会有多个校验位，最终我们可以通过组合数学的知识来判断出错位置</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TbhwvV"><img src="https://s4.ax1x.com/2022/01/03/TbhwvV.png" alt="TbhwvV.png"></a></p>
+<p>首先要解决的问题就是如何将n位有效信息位分为k组，k组也将对应k个校验位。而这k个校验位最多可以表示2<sup>k</sup>种状态，海明校验码整体将有信息位和校验位一起组成，所以共有n+k位，这n+k位都会有可能出错，再加上一种正确的情况，共会有n+k+1种情况，所以校验位要包含的状态数要大于等于n+k+1才可以</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tb5h7D"><img src="https://s4.ax1x.com/2022/01/03/Tb5h7D.png" alt="Tb5h7D.png"></a></p>
+<p>假如现在的信息位是1010，也就是说n为4，求解方程组可得k至少要为3才可以，所以我们的k取3，也就是说有三位校验码，校验码只能放置在2<sup>i-1</sup>这个位置上，也就是1，2，4，8……这些位置上，所以三个校验码会被放置在1、2、4上，之后信息位按照顺序放置在剩余位置即可。</p>
+<p>该如何为校验码和信息位分组呢？首先我们将信息位所在的位置用二进制表达出来，比如D1所处在3这个位置，那么用二进制表示就是011，以此类推将所有的信息位表示出来后，从低位向高位进行分组，选取当前位置都为1的几个信息位在一组即可，例如H3、H5、H7的最低位相同，那么这三个位置上的信息位与第一个校验位P1组成一组，而校验位的取值只需要为本组的信息位进行异或运算即可，反复进行这个操作，直到每个校验码都有对应的取值为止</p>
+<p>纠错的操作借用偶检验的思想，我们对每组进行一次异或运算，分析出每组得到的结果是0还是1，如果出现了不是都为0的情况，那么说明肯定发生了错误，我们将得到的二进制结果转换为十进制，所对应的就是出错的位置</p>
+<p>需要注意的是，上图中的各排序顺序都是从大到小进行排序的，如果题中给出的数据为从小到大进行排序，那么我们只需要将表格反过来即可</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tbb8tU"><img src="https://s4.ax1x.com/2022/01/03/Tbb8tU.png" alt="Tbb8tU.png"></a></p>
+<p>同样需要注意的是，海明码只有1位的纠错能力和两位的检错能力，也就是说比如S1S2S3得到的为011，有两个一代表两个位发生了错误吗，但011又可以代表是三这个位置发生了错误，我们无法判断出到底是两位发生了错误还是一位发生了错误，所以我们引进了“全校验码”这个定义，在整组数据的最前面加入一个1，当出现上述这种特殊情况时，同时全体的偶检验为0成功时，说明有两位错误，需要重新进行数据传递了。</p>
+<p><strong>汉明校验码(海明校验码)由汉明于1940年工作与贝尔实验室时发现问题，着手开发调试算法，终于在1950年发表汉明校验码的方法，让我们感谢这位科学家</strong></p>
+<p>关于汉明码的理解，可以从许多角度入手，如果组合数学的方式无法理解，我推荐从信息论的角度切入，以高屋建瓴的视角看待这个问题，或者也可以观看3b1b的视频，深入浅出，浅显易懂</p>
+<p><a href="https://www.bilibili.com/video/BV1WK411N7kz?spm_id_from=333.999.0.0" target="_blank">视频链接</a></p>
+<h5 id="2-6循环冗余校验码-CRC码"><a href="#2-6循环冗余校验码-CRC码" class="headerlink" title="2.6循环冗余校验码(CRC码)"></a>2.6循环冗余校验码(CRC码)</h5><p>思想：数据发送、接受双方约定一个<strong>除数</strong>，若数据出错导致余数改变，即检测到了错误</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqU56I"><img src="https://s4.ax1x.com/2022/01/04/TqU56I.png" alt="TqU56I.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tq2UrF"><img src="https://s4.ax1x.com/2022/01/04/Tq2UrF.png" alt="Tq2UrF.png"></a></p>
+<blockquote>
+<p>1.根据生成多项式可以确定接收方与发送方共同确定的余数，即展开为带系数的多项式，将系数提出即可</p>
+<p>2.CRC码整体为信息位与校验位，确定校验位个数的方式为生成多项式的最高次幂为多少，校验位就会有多少位，而校验码就将校验位与信息位加起来即可</p>
+<p>3.该如何确定校验位的数字呢？我们将信息码低位补充k个0，k为校验位的位数，之后对移位的信息码进行模2除法，计算余数</p>
+<p>4.将信息位与得到的校验位拼在一起，得到完整的CRC码</p>
+<p>5.发送方将CRC码发送给接收方，接收方接受CRC码后用双方约定的除数进行模2除运算，如果得到的余数为000，即代表没有出错，如果余数中出现了非零位，则代表数据传输出错，但我们不能同海明码一样，将二进制转换为十进制来判断是哪位出错，具体原因如下</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqTfZ6"><img src="https://s4.ax1x.com/2022/01/04/TqTfZ6.png" alt="TqTfZ6.png"></a></p>
+<p>首先余数肯定是3位的，也就代表最多只能表示2<sup>3</sup>这么多的情况，抛去正确的000这种情况，还剩下7种错误情况可以表示，当1-7这些位置出错我们可以表示，但之后的位出错就会重复之前的情况，所以我们无法简单的利用二进制转十进制的方式来判断出错位置</p>
+<p><strong>注意，上述图片中从第二行开始，接受码的最后一位均应为0</strong></p>
+<p>当然了，我们也不能因此就说CRC码不具备纠错能力，实际上只有当信息位的位数选取合适时，才能具有纠错能力；换句话说，上述情况CRC码无法纠错的原因是因为CRC码的总位数超过了校验位的位数，如果当信息位只有4位时，我们总共有7种出错情况，正好可以达到单比特纠错的目的</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tq70OI"><img src="https://s4.ax1x.com/2022/01/04/Tq70OI.png" alt="Tq70OI.png"></a></p>
+</blockquote>
+<p><strong>何为模2除法呢？</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqfUr8"><img src="https://s4.ax1x.com/2022/01/04/TqfUr8.png" alt="TqfUr8.png"></a></p>
+<blockquote>
+<p>1.我们将除数与被除数写在两侧，首先如果被除数的第一位是1，那么我们就商1，如果是0，我们就商0</p>
+<p>2.之后我们对后三位进行异或运算，这里的后三位是指当前运算对应着的四位中的后三位</p>
+<p>3.异或运算结束后，补一位下来重复进行上述操作即可</p>
+<p>4.直到最后得到余数，余数即为校验位，余数一定会是除数的位数减一</p>
+</blockquote>
+<p>那么为什么将CRC叫做循环冗余校验码呢？让我们重新审视一下这张图</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqTfZ6"><img src="https://s4.ax1x.com/2022/01/04/TqTfZ6.png" alt="TqTfZ6.png"></a></p>
+<p>如果我们将出错位为1的情况下的余数当作被除数，将其低位补一个0，变为0010，之后与约定的除数进行模2除运算，得到的余数正好为010，也就是下一个出错情况的余数，接着进行除法运算，会得到100，即为第三个出位的余数，反复进行，最终会在1-7这个出错情况内进行循环，这也就是CRC码叫做循环冗余校验码的原因了</p>
 <hr/>
 
-<p>Leetcode 344 反转字符串</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oHdAQH"><img src="https://s4.ax1x.com/2021/12/12/oHdAQH.png" alt="oHdAQH.png"></a></p>
+<h5 id="2-7定点数的表示"><a href="#2-7定点数的表示" class="headerlink" title="2.7定点数的表示"></a>2.7定点数的表示</h5><p><strong>定点数即为小数点位置固定的数，而与之对应的浮点数则为小数点位置不固定的数</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqbRLn"><img src="https://s4.ax1x.com/2022/01/04/TqbRLn.png" alt="TqbRLn.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqqQyj"><img src="https://s4.ax1x.com/2022/01/04/TqqQyj.png" alt="TqqQyj.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Tqq6k6"><img src="https://s4.ax1x.com/2022/01/04/Tqq6k6.png" alt="Tqq6k6.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqLAc4"><img src="https://s4.ax1x.com/2022/01/04/TqLAc4.png" alt="TqLAc4.png"></a><br>  如上图所示，我们在用原码表示定点整数时，小数点位置隐含在最后，小数点左侧位权从2<sup>0</sup>开始，一直递增，右侧从2<sup>-1</sup>开始；表示定点小数时，我们将小数点位置隐含在符号位的右侧</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TqvNQS"><img src="https://s4.ax1x.com/2022/01/04/TqvNQS.png" alt="TqvNQS.png"></a></p>
+<p>为何机器字长为<code>n+1</code>位时可以表示的原码整数为如此范围，首先n+1位的机器字长中，抛去1位作为符号位，剩余的n位作为尾数，最多表示2<sup>n</sup>这么多的数字，但是符号位的1与0会将0这个真值重复一次，+0与-0是相同的两个数字，所以我们减去重复的一个，最终得到2<sup>n</sup>-1这么多数字</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TLGjFH"><img src="https://s4.ax1x.com/2022/01/04/TLGjFH.png" alt="TLGjFH.png"></a></p>
+<p>在实际应用中，反码并没有什么卵用，仅仅只是求补码过程中的一个中间量</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TLNvHf"><img src="https://s4.ax1x.com/2022/01/04/TLNvHf.png" alt="TLNvHf.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TLwOJS"><img src="https://s4.ax1x.com/2022/01/04/TLwOJS.png" alt="TLwOJS.png"></a><br><a target="_blank" rel="noopener" href="https://imgtu.com/i/TL0FiT"><img src="https://s4.ax1x.com/2022/01/04/TL0FiT.png" alt="TL0FiT.png"></a></p>
+<p>移码有何实际作用呢？当真值不断增大时，可以发现移码也不断在增大，所以计算机可以利用移码的这种独特性质很方便的比较真值的大小</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TLTVpQ"><img src="https://s4.ax1x.com/2022/01/04/TLTVpQ.png" alt="TLTVpQ.png"></a></p>
+<h5 id="2-8原码补码移码的作用"><a href="#2-8原码补码移码的作用" class="headerlink" title="2.8原码补码移码的作用"></a>2.8原码补码移码的作用</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TLO9mj"><img src="https://s4.ax1x.com/2022/01/04/TLO9mj.png" alt="TLO9mj.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TLXodA"><img src="https://s4.ax1x.com/2022/01/04/TLXodA.png" alt="TLXodA.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOp0sK"><img src="https://s4.ax1x.com/2022/01/04/TOp0sK.png" alt="TOp0sK.png"></a></p>
+<p>注意，此处进行的二进制运算都是模2减运算，即异或运算</p>
 <hr/>
 
-<p>思路：</p>
-<p>​    说实在的，这个题和上买那几个题根本没法比。</p>
-<p>​    一个指针指向头，一个指针指向尾，互相交换，最终两指针相遇结束即可</p>
+<h5 id="2-9移位运算"><a href="#2-9移位运算" class="headerlink" title="2.9移位运算"></a>2.9移位运算</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOV1Ln"><img src="https://s4.ax1x.com/2022/01/04/TOV1Ln.png" alt="TOV1Ln.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOZSwq"><img src="https://s4.ax1x.com/2022/01/04/TOZSwq.png" alt="TOZSwq.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOZnTx"><img src="https://s4.ax1x.com/2022/01/04/TOZnTx.png" alt="TOZnTx.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOdcz4"><img src="https://s4.ax1x.com/2022/01/04/TOdcz4.png" alt="TOdcz4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOdvwt"><img src="https://s4.ax1x.com/2022/01/04/TOdvwt.png" alt="TOdvwt.png"></a></p>
+<h5 id="2-10加减运算和溢出判断"><a href="#2-10加减运算和溢出判断" class="headerlink" title="2.10加减运算和溢出判断"></a>2.10加减运算和溢出判断</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOBKsJ"><img src="https://s4.ax1x.com/2022/01/04/TOBKsJ.png" alt="TOBKsJ.png"></a></p>
+<p>由于想从电路方面实现减法是十分困难的，所以我们采用补码的形式来进行减法运算</p>
+<p>一个由负数的补码快速求原码的方法是，从补码的右边开始寻找第一个出现的1，当作分界线划开左右两侧，左侧的数字全部取反，右侧数字不变即可;同样这个方式也可以求一个数的负数的补码、由原码求补码</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOsCse"><img src="https://s4.ax1x.com/2022/01/04/TOsCse.png" alt="TOsCse.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOyoB4"><img src="https://s4.ax1x.com/2022/01/04/TOyoB4.png" alt="TOyoB4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TO6kCt"><img src="https://s4.ax1x.com/2022/01/04/TO6kCt.png" alt="TO6kCt.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TO6XIs"><img src="https://s4.ax1x.com/2022/01/04/TO6XIs.png" alt="TO6XIs.png"></a></p>
+<p>为何将双符号位补码叫做模4补码：我们可以将双符号位数中的逗号当作分界线，左侧数值的位权以此为2<sup>0</sup>、2<sup>1</sup>，到了2<sup>2</sup>后就不再有数字，而$$xmod4$$的意思即为将4后的二进制数字全部保留，4前的数字全部舍去，也就是说2<sup>2</sup>右侧的数字全部被保留，左侧数字全部去除，所以又叫做模4补码，而单符号位补码也是一样的道理</p>
+<p>在实际存储中，我们也不会为双符号位存储两个符号位，仅仅只是在运算时才会为其复制一个符号位</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TOgW9I"><img src="https://s4.ax1x.com/2022/01/04/TOgW9I.png" alt="TOgW9I.png"></a></p>
 <hr/>
 
-<p>代码：</p>
-<pre><code class="line-numbers language-c++">class Solution&#123;
-public:
-    void reverseString(vector&lt;char&gt;&amp; s)&#123;
-        int left=0,right=s.size()-1;
-        //这里我们不加等号
-        while(left&lt;right)&#123;
-            swap(s[left],s[right]);
-            ++left;
-            --right;
-        &#125;
-    &#125;
-&#125;;
-</code></pre>
-<hr/>
-
-<p>Leetcode 19 删除链表的倒数第 N 个结点</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obGkwT"><img src="https://s4.ax1x.com/2021/12/12/obGkwT.png" alt="obGkwT.png"></a></p>
-<hr/>
-
-<p>思路：</p>
-<p>​        如果这是个数组，我们要删除倒数第N个元素，可以使用双指针，快慢指针指向同一个元素，首先让fast先移动n步，然后再让fast和slow同时移动，直到fast指向了数组的末尾，我们删掉slow所指向的下一个元素就行了。</p>
-<p>​        如果是链表的话，我们删除一个结点的理想操作最好不是指针指向这个结点去删除，这要会导致前后断节，理想的操作是指向要删除的结点的前一个结点，把指针指向下一个节点的下一个节点，然后把要删除的结点delete或者free掉就行。所以我们在数组的基础上改一改，首先我们还是让fast和slow指向同一个节点，然后先让fast走n+1步，为什么这里要n+1步呢，因为在数组中我们以移动到末尾元素来作为快指针停止的标准，而这里我们选择快指针移动到nullptr来作为结束，多走了一步，那我们前面就要补上一步(可能我说的不太好)。但实际上我们还是可以让快指针先移动n步，只不过就是while的判断条件变为指向的结点的指针域指向为nullptr，但这样对于链表来说，删除就不方便了。之后的操作便是一样的，让快慢指针一起移动，删除慢指针指向的下一个结点就行了。</p>
-<hr/>
-
-<p>代码：</p>
-<pre><code class="line-numbers language-c++">class Solution&#123;
-public:
-    struct ListNode&#123;
-      int val;
-      ListNode* next;
-      ListNode(int val):val(val),next(nullptr)&#123;&#125;
-    &#125;;
-    ListNode * removeNthFromEnd(ListNode* head,int n)&#123;
-        ListNode * dummyHead=new ListNode(0);
-        dummyHead-&gt;next-&gt;head;
-        ListNode* fast=dummyHead;
-        ListNode* slow=dummyHead;
-        while(n--&amp;&amp;fast!=NULL)&#123;
-            fast=fast-&gt;next;
-        &#125;
-        fast=fast-&gt;next;
-        while(fast!=NULL)&#123;
-            fast=fast-&gt;next;
-            slow=slow-&gt;next;
-        &#125;
-        ListNode* temp=slow-&gt;next;
-        slow-&gt;next=slow-&gt;next-&gt;next;
-        delete temp;//防止内存泄漏
-        return dummyHead-&gt;next;
-    &#125;
-&#125;;
-</code></pre>
-<hr/>
-
-<p>Leetcode 141 环形链表</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obdNUx"><img src="https://s4.ax1x.com/2021/12/12/obdNUx.png" alt="obdNUx.png"></a></p>
-<hr/>
-
-<p>思路：</p>
-<p>​        对于链表找环路的问题，有一个通用的解法——快慢指针(Floyd判圈法)。给定两个指针，分别命名slow和fast，起始位置在链表的开头。每次fast前进两步，slow前进一步。如果fast可以走到尽头，那么说明链表没有环路；如果fast可以无限走下去，那么说明一定有环路，且一定存在一个时刻slow和fast会相遇(fast先进入了圈子开始兜圈，后面slow进入，就相当于是一个追及相遇问题了)。当slow和fast第一次相遇时，我们将fast重新移动到链表开头，并且让slow和fast每次都进一步，当slow和fast第二次相遇时，相遇的节点即为环路的开始点。</p>
-<p>​        Leetcode上还把这个算法叫做龟兔赛跑法，形象生动，具体解释是一样的，但是一些说法可以帮助理解，比如</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obBXJP"><img src="https://s4.ax1x.com/2021/12/12/obBXJP.png" alt="obBXJP.png"></a></p>
-<hr/>
-
-<p>代码：</p>
-<pre><code class="line-numbers language-c++">//本题只是简单的判断是否为环形链表 暂时不用返回环路的开始点
-class Solution&#123;
-public:
-    bool hashCycle(ListNode* head)&#123;
-        if(head==nullptr||head-&gt;next=nullptr)&#123;
-            return false;
-        &#125;
-        ListNode* slow=head;
-        ListNode* fast=head-&gt;next;
-        //我们不能只判断一个fast是不是指向了nullptr这个条件，比如说fast-&gt;next如果也是nullptr，那么他肯定会到nullptr的，我们也需要把这种情况考虑进来
-        while(slow!=fast)&#123;
-            if(fast==nullptr||fast-&gt;next==nullptr)&#123;
-                return false;
-            &#125;
-            slow=slow-&gt;next;
-            fast=fast-&gt;next-&gt;next;
-        &#125;
-        return true;
-    &#125;
-&#125;;
-</code></pre>
-<hr/>
-
-<p>Leetcode 142 环形链表 II</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/obc0R1"><img src="https://s4.ax1x.com/2021/12/12/obc0R1.png" alt="obc0R1.png"></a></p>
-<hr/>
-
-<p>思路：</p>
-<p>​        这题我们就可以使用完整版的弗洛伊德判圈法了。</p>
-<hr/>
-
-<p>代码：</p>
-<pre><code class="line-numbers language-c++">/**
- * Definition for singly-linked list.
- * struct ListNode &#123;
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) &#123;&#125;
- * &#125;;
- */
-class Solution &#123;
-public:
-    ListNode *detectCycle(ListNode *head) &#123;
-        ListNode * slow=head;
-        ListNode * fast=head;
-        //这里我们用do while，前面的快慢就可以指向同一结点了
-        do&#123;
-            if(!fast||!fast-&gt;next) return nullptr;
-            fast=fast-&gt;next-&gt;next;
-            slow=slow-&gt;next;&#125;while(fast!=slow);
-        //已判断出有环 下面我们寻找环结点入口
-        fast=head;
-        while(fast!=slow)&#123;
-            fast=fast-&gt;next;
-            slow=slow-&gt;next;
-        &#125;
-        return fast;
-    &#125;
-&#125;;
-</code></pre>
-<hr/>
-
-<p>2021/12/12 先写到这里 之后会继续更新题目和总结</p>
-
+<h5 id="2-11定点数的原码乘法运算"><a href="#2-11定点数的原码乘法运算" class="headerlink" title="2.11定点数的原码乘法运算"></a>2.11定点数的原码乘法运算</h5>
                 
             </div>
             <hr/>
@@ -919,7 +696,7 @@ public:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/12/12/%E5%8F%8C%E6%8C%87%E9%92%88/">http://example.com/2021/12/12/%E5%8F%8C%E6%8C%87%E9%92%88/</a>
+                    <a href="http://example.com/2022/01/04/%E8%AE%A1%E7%BB%84/">http://example.com/2022/01/04/%E8%AE%A1%E7%BB%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1126,11 +903,12 @@ public:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/04/Opencv%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                <a href="/2022/01/04/%E8%AE%A1%E7%BB%84/">
                     <div class="card-image">
                         
                         
@@ -1146,9 +924,9 @@ public:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1157,6 +935,7 @@ public:
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1167,13 +946,13 @@ public:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/19/HTTP%E5%8D%8F%E8%AE%AE/">
+                <a href="/2022/01/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="HTTP协议基础">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">HTTP协议基础</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1184,31 +963,15 @@ public:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Thoughts/" class="post-category">
-                                    Thoughts
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Appletree24(A fool)
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Thoughts/">
-                        <span class="chip bg-color">Thoughts</span>
-                    </a>
-                    
-                    <a href="/tags/HTTP/">
-                        <span class="chip bg-color">HTTP</span>
-                    </a>
-                    
                 </div>
                 
             </div>
